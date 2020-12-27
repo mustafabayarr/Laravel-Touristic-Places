@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Directory HTML-5 Template </title>
+    <title>@yield('title')</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="manifest" href="{{asset('front/')}}/site.webmanifest">
@@ -46,7 +46,7 @@
                         <!-- Logo -->
                         <div class="col-xl-2 col-lg-2 col-md-1">
                             <div class="logo">
-                                <a href="index.html"><img src="{{asset('front/')}}/assets/img/logo/logo.png" alt=""></a>
+                                <a href="{{route('homepage')}}"><img src="{{asset('front/')}}/assets/img/logo/logo.png" alt=""></a>
                             </div>
                         </div>
                         <div class="col-xl-10 col-lg-10 col-md-8">
@@ -54,20 +54,20 @@
                             <div class="main-menu f-right d-none d-lg-block">
                                 <nav>
                                     <ul id="navigation">
-                                        <li><a href="index.html">Home</a></li>
-                                        <li><a href="about.html">About</a></li>
-                                        <li><a href="catagori.html">Catagories</a></li>
-                                        <li><a href="listing.html">Listing</a></li>
+                                        <li><a href="{{route('homepage')}}">Home</a></li>
+                                        <li><a href="{{route('about')}}">About</a></li>
+                                        <li><a href="{{route('categories')}}">Catagories</a></li>
+                                        <li><a href="{{route('listing')}}">Listing</a></li>
                                         <li><a href="#">Page</a>
                                             <ul class="submenu">
                                                 <li><a href="blog.html">Blog</a></li>
                                                 <li><a href="blog_details.html">Blog Details</a></li>
                                                 <li><a href="elements.html">Element</a></li>
-                                                <li><a href="listing_details.html">Listing details</a></li>
+                                                <li><a href="{{route('listing_details')}}">Listing details</a></li>
                                             </ul>
                                         </li>
-                                        <li><a href="contact.html">Contact</a></li>
-                                        <li class="add-list"><a href="listing_details.html"><i class="ti-plus"></i> add Listing</a></li>
+                                        <li><a href="{{route('contact')}}">Contact</a></li>
+                                        <li class="add-list"><a href="{{route('listing_details')}}"><i class="ti-plus"></i> add Listing</a></li>
                                         <li class="login"><a href="#">
                                                 <i class="ti-user"></i> Sign in or Register</a>
                                         </li>
