@@ -17,10 +17,10 @@
                             <div class="select-itms">
                                 <select name="select" id="select1">
                                     <option value="">All Catagories</option>
-                                    <option value="">Catagories One</option>
-                                    <option value="">Catagories Two</option>
-                                    <option value="">Catagories Three</option>
-                                    <option value="">Catagories Four</option>
+                                    <option value="">Hotel</option>
+                                    <option value="">Night Life</option>
+                                    <option value="">Culture Places</option>
+                                    <option value="">Restaurant</option>
                                 </select>
                             </div>
                         </div>
@@ -59,9 +59,10 @@
                             <div class="select-job-items1">
                                 <select name="select1">
                                     <option value="">Choose categories</option>
-                                    <option value="">Category 1</option>
-                                    <option value="">Category 2</option>
-                                    <option value="">Category 3</option>
+                                    <option value="">Hotel</option>
+                                    <option value="">Night Life</option>
+                                    <option value="">Culture Places</option>
+                                    <option value="">Restaurant</option>
                                 </select>
                             </div>
                             <!--  Select job items End-->
@@ -75,53 +76,10 @@
                                 </select>
                             </div>
                             <!--  Select job items End-->
-                            <!-- select-Categories start -->
-                            <div class="select-Categories pt-140 pb-20">
-                                <label class="container">Full Time
-                                    <input type="checkbox" >
-                                    <span class="checkmark"></span>
-                                </label>
-                                <label class="container">Ratings
-                                    <input type="checkbox" checked="checked active">
-                                    <span class="checkmark"></span>
-                                </label>
-                            </div>
-                            <!-- select-Categories End -->
-                            <!-- Select job items start -->
-                            <div class="select-job-items2">
-                                <select name="select2">
-                                    <option value="">Area (km)</option>
-                                    <option value="">Dhaka- 1km</option>
-                                    <option value="">Dinajpur- 2km</option>
-                                    <option value="">Chittagong - 3km</option>
-                                </select>
-                            </div>
-                            <!--  Select job items End-->
                         </div>
 
                         <div class="single-listing">
-                            <!-- Range Slider Start -->
-                            <aside class="left_widgets p_filter_widgets price_rangs_aside sidebar_box_shadow">
-                                <div class="small-section-tittle2">
-                                    <h4>Price range</h4>
-                                </div>
-                                <div class="widgets_inner">
-                                    <div class="range_item">
-                                        <!-- <div id="slider-range"></div> -->
-                                        <input type="text" class="js-range-slider" value="" />
-                                        <div class="d-flex align-items-center">
-                                            <div class="price_text">
-                                                <p>Price :</p>
-                                            </div>
-                                            <div class="price_value d-flex justify-content-center">
-                                                <input type="text" class="js-input-from" id="amount" readonly />
-                                                <span>to</span>
-                                                <input type="text" class="js-input-to" id="amount" readonly />
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </aside>
+
                             <!-- Range Slider End -->
                             <a href="#" class="btn list-btn mt-20">Reset</a>
                         </div>

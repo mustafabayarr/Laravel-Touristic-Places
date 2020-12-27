@@ -7,10 +7,10 @@
         <div class="select-itms">
             <select name="select" id="select1">
                 <option value="">All Catagories</option>
-                <option value="">Catagories One</option>
-                <option value="">Catagories Two</option>
-                <option value="">Catagories Three</option>
-                <option value="">Catagories Four</option>
+                <option value="">Hotel</option>
+                <option value="">Night Life</option>
+                <option value="">Culture Places</option>
+                <option value="">Restaurant</option>
             </select>
         </div>
     </div>

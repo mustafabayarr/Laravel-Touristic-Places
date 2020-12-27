@@ -17,7 +17,7 @@
                         <span class="flaticon-bed"></span>
                     </div>
                     <div class="cat-cap">
-                        <h5><a href="catagori.html">Leving Hotel</a></h5>
+                        <h5><a href="catagori.html">Hotel</a></h5>
                         <p>Must explain your how this keind denoun pleasure</p>
                         <a href="catagori.html">View Details</a>
                     </div>
@@ -53,7 +53,7 @@
                         <span class="flaticon-food"></span>
                     </div>
                     <div class="cat-cap">
-                        <h5><a href="catagori.html">Resturent</a></h5>
+                        <h5><a href="catagori.html">Restaurant</a></h5>
                         <p>Must explain your how this keind denoun pleasure</p>
                         <a href="catagori.html">View Details</a>
                     </div>
