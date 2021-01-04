@@ -21,10 +21,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b0f050f8-dbca-439a-8b7a-0f51371d573c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/back/category_edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/PlacesController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Places.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_01_04_202429_create_places_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_01_04_203334_places.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/back/place_add.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/back/place_edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/back/places.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/CategoryController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/back/category.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/back/category.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/back/layouts/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/back/layouts/sidebar.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -160,11 +165,15 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1lFIK1OpiML0TXlYyhPJ1x7HP5B" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -213,7 +222,7 @@
       <workItem from="1609625241548" duration="1988000" />
       <workItem from="1609695758648" duration="8919000" />
       <workItem from="1609717924194" duration="8959000" />
-      <workItem from="1609780930958" duration="3777000" />
+      <workItem from="1609780930958" duration="16456000" />
     </task>
     <task id="LOCAL-00001" summary="beginning to project">
       <created>1608585665541</created>
@@ -278,7 +287,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609726791450</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="fixed edit admin category">
+      <created>1609786507063</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1609786507063</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -297,6 +313,7 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="beginning to project" />
     <MESSAGE value="added front-end template" />
     <MESSAGE value="added and fixed all front-end template" />
@@ -305,7 +322,8 @@
     <MESSAGE value="fixed submit" />
     <MESSAGE value="added admin categories and linked database" />
     <MESSAGE value="added form for categories/ adding and deleting is activated" />
-    <option name="LAST_COMMIT_MESSAGE" value="added form for categories/ adding and deleting is activated" />
+    <MESSAGE value="fixed edit admin category" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed edit admin category" />
   </component>
   <component name="WindowStateProjectService">
     <state x="578" y="312" key="#Composer" timestamp="1607186413273">
@@ -316,10 +334,14 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="361" y="91" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.864@0.0.1536.864" timestamp="1609700321690" />
-    <state x="393" y="1" key="CommitChangelistDialog2" timestamp="1609726790730">
+    <state x="499" y="187" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1609801680368">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="393" y="1" key="CommitChangelistDialog2/0.0.1536.864@0.0.1536.864" timestamp="1609726790730" />
+    <state x="499" y="187" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.864@0.0.1536.864" timestamp="1609801680368" />
+    <state x="393" y="1" key="CommitChangelistDialog2" timestamp="1609786506363">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="393" y="1" key="CommitChangelistDialog2/0.0.1536.864@0.0.1536.864" timestamp="1609786506363" />
     <state x="548" y="173" key="FileChooserDialogImpl" timestamp="1609080903478">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
@@ -336,10 +358,10 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="277" y="77" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1607191855157" />
-    <state x="361" y="165" key="Vcs.Push.Dialog.v2" timestamp="1609726795685">
+    <state x="361" y="165" key="Vcs.Push.Dialog.v2" timestamp="1609786509633">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="361" y="165" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1609726795685" />
+    <state x="361" y="165" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1609786509633" />
     <state x="486" y="204" key="refactoring.ChangeSignatureDialog" timestamp="1609724437470">
       <screen x="0" y="0" width="1536" height="864" />
     </state>

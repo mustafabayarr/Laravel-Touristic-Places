@@ -20,6 +20,16 @@ Route::middleware(['auth'])->prefix('admin')->group(function () {
     Route::get('/category/edit/{id}',[App\Http\Controllers\Admin\CategoryController::class,'edit'])->name('admin_category_edit');
     Route::post('/category/update/{id}',[App\Http\Controllers\Admin\CategoryController::class,'update'])->name('admin_category_update');
     Route::get('/category/destroy/{id}',[App\Http\Controllers\Admin\CategoryController::class,'destroy'])->name('admin_category_destroy');
+
+    Route::prefix('places')->group(function(){
+        Route::get('/',[App\Http\Controllers\Admin\PlacesController::class,'index'])->name('admin_places');
+        Route::get('/create',[App\Http\Controllers\Admin\PlacesController::class,'create'])->name('admin_places_create');
+        Route::post('/store',[App\Http\Controllers\Admin\PlacesController::class,'store'])->name('admin_places_store');
+        Route::get('/show',[App\Http\Controllers\Admin\PlacesController::class,'show'])->name('admin_places_show');
+        Route::get('/edit/{id}',[App\Http\Controllers\Admin\PlacesController::class,'edit'])->name('admin_places_edit');
+        Route::post('/update/{id}',[App\Http\Controllers\Admin\PlacesController::class,'update'])->name('admin_places_update');
+        Route::get('/destroy/{id}',[App\Http\Controllers\Admin\PlacesController::class,'destroy'])->name('admin_places_destroy');
+    });
 });
 
 
