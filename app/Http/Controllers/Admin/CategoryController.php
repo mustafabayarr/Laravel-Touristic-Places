@@ -28,7 +28,7 @@ class CategoryController extends Controller
      */
     public function add()
     {
-        $category_list = DB::table('categories')->get()->where('parent_id', 0);
+        $category_list = DB::table('categories')->where('parent_id', 0)->get();
         return view('back.category_add', ['category_list' => $category_list]);
     }
 
@@ -82,9 +82,11 @@ class CategoryController extends Controller
      * @param \App\Models\Category $category
      * @return \Illuminate\Http\Response
      */
-    public function edit(Category $category)
+    public function edit(Category $category, $id)
     {
-        //
+        $category = Category::find($id);
+        $category_list = DB::table('categories')->where('parent_id', 0)->get();
+        return view('back.category_edit', ['category_list' => $category_list, 'category' => $category]);
     }
 
     /**
@@ -94,9 +96,20 @@ class CategoryController extends Controller
      * @param \App\Models\Category $category
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Category $category)
+    public function update(Request $request, Category $category,$id)
     {
-        //
+        $category = Category::find($id);
+
+        $category->parent_id = $request->input('parent_id');
+        $category->title = $request->input('title');
+        $category->slug = $request->input('slug');
+        $category->keywords = $request->input('keywords');
+        $category->description = $request->input('description');
+        $category->status = $request->input('status');
+
+        $category->save();
+        return redirect()->route('admin_category');
+
     }
 
     /**
