@@ -12,7 +12,7 @@
                             <div class="text-center">
                                 <h1 class="h4 text-gray-900 mb-4">Add a Place!</h1>
                             </div>
-                            <form class="user" action="{{route('admin_places_store')}}" method="POST">
+                            <form class="user" action="{{route('admin_places_store')}}" method="POST" enctype="multipart/form-data">
                                 @csrf
                                 <div class="form-group">
                                     <label for="exampleFormControlSelect1">Category</label>
@@ -46,7 +46,10 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleFormControlInput1">Image</label>
-                                    <input type="text" class="form-control" name="image" id="exampleFormControlInput1">
+                                    <input type="file" class="form-control" name="image" id="exampleFormControlInput1">
+                                    @if($rs->image)
+                                        <img src="{{Storage::url($rs->image)}}" height="100" alt=""/>
+                                    @endif
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleFormControlInput1">Country</label>

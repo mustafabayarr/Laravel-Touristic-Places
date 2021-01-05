@@ -8,6 +8,7 @@ use App\Models\Places;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Storage;
 
 class PlacesController extends Controller
 {
@@ -49,7 +50,7 @@ class PlacesController extends Controller
             'slug' => $request->input('slug'),
             'keywords' => $request->input('keywords'),
             'description' => $request->input('description'),
-            'image' => $request->input('image'),
+            'image' => Storage::putFile('images', $request->file('image')),
             'details' => $request->input('details'),
             'city' => $request->input('city'),
             'country' => $request->input('country'),
@@ -79,7 +80,7 @@ class PlacesController extends Controller
      */
     public function edit(Places $places,$id)
     {
-        $place = Category::find($id);
+        $place = Places::find($id);
         $place_list = DB::table('categories')->get()->where('parent_id',0);
         return view('back.place_edit', ['place_list' => $place_list, 'place' => $place]);
     }
@@ -106,6 +107,7 @@ class PlacesController extends Controller
         $place->location = $request->input('location');
         $place->user_id = Auth::id();
         $place->status = $request->input('status');
+        $place->image = Storage::putFile('images', $request->file('image'));
         $place->save();
         return redirect()->route('admin_places');
     }

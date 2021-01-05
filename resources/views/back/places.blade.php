@@ -41,7 +41,11 @@
                                     <td>{{$rs->id}}</td>
                                     <td>{{$rs->category_id}}</td>
                                     <td>{{$rs->title}}</td>
-                                    <td>{{$rs->image}}</td>
+                                    <td>
+                                        @if($rs->image)
+                                            <img src="{{Storage::url($rs->image)}}" height="100" alt=""/>
+                                        @endif
+                                    </td>
                                     <td>{{$rs->country}}</td>
                                     <td>{{$rs->city}}</td>
                                     <td>{{$rs->status}}</td>
