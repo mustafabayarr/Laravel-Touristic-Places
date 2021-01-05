@@ -1,5 +1,8 @@
 @extends('back.layouts.dashboard')
 @section('title','Edit Place')
+@section('styles')
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
+@endsection
 
 @section('content')
     <div class="container">
@@ -46,9 +49,11 @@
                                            value="{{$place->description}}" id="exampleFormControlInput1">
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleFormControlInput1">Details</label>
-                                    <input type="text" class="form-control" name="details" value="{{$place->details}}"
-                                           id="exampleFormControlInput1">
+                                    <div class="form-group">
+                                        <label for="exampleFormControlInput1">Details</label>
+                                        <textarea id="summernote" name="details" value="{{$place->details}}"></textarea>
+                                    </div>
+
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleFormControlInput1">Image</label>
@@ -90,5 +95,16 @@
             </div>
         </div>
     </div>
+@endsection
+@section('scripts')
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
+    <script>
+        $('#summernote').summernote({
+            placeholder: 'Hello Bootstrap 4',
+            tabsize: 2,
+            height: 100
+        });
+    </script>
 @endsection
 

@@ -23,6 +23,9 @@
     <!-- Custom styles for this page -->
     <link href="{{asset('back/assets/')}}/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
 
+    @yield('styles')
+
+
 </head>
 
 <body id="page-top">
@@ -66,6 +69,7 @@
 
 <!-- Page level custom scripts -->
 <script src="{{asset('back/assets/')}}/js/demo/datatables-demo.js"></script>
+@yield('scripts')
 
 </body>
 

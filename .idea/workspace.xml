@@ -21,12 +21,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b0f050f8-dbca-439a-8b7a-0f51371d573c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Laravel1Jet.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Laravel1Jet.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/PlacesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/PlacesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/filesystems.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/filesystems.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/back/layouts/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/back/layouts/dashboard.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/back/place_add.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/back/place_add.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/back/place_edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/back/place_edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/back/places.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/back/places.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -219,7 +223,7 @@
       <workItem from="1609695758648" duration="8919000" />
       <workItem from="1609717924194" duration="8959000" />
       <workItem from="1609780930958" duration="16916000" />
-      <workItem from="1609869261907" duration="7267000" />
+      <workItem from="1609869261907" duration="18498000" />
     </task>
     <task id="LOCAL-00001" summary="beginning to project">
       <created>1608585665541</created>
@@ -298,7 +302,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609804768100</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="admin/places - image was created">
+      <created>1609878400227</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1609878400227</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -328,7 +339,8 @@
     <MESSAGE value="added form for categories/ adding and deleting is activated" />
     <MESSAGE value="fixed edit admin category" />
     <MESSAGE value="listing admin/places - editing and deleting was created" />
-    <option name="LAST_COMMIT_MESSAGE" value="listing admin/places - editing and deleting was created" />
+    <MESSAGE value="admin/places - image was created" />
+    <option name="LAST_COMMIT_MESSAGE" value="admin/places - image was created" />
   </component>
   <component name="WindowStateProjectService">
     <state x="578" y="312" key="#Composer" timestamp="1607186413273">
@@ -343,14 +355,30 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="499" y="187" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.864@0.0.1536.864" timestamp="1609801680368" />
-    <state x="393" y="1" key="CommitChangelistDialog2" timestamp="1609804767409">
+    <state x="393" y="1" key="CommitChangelistDialog2" timestamp="1609878399425">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="393" y="1" key="CommitChangelistDialog2/0.0.1536.864@0.0.1536.864" timestamp="1609804767409" />
+    <state x="393" y="1" key="CommitChangelistDialog2/0.0.1536.864@0.0.1536.864" timestamp="1609878399425" />
     <state x="548" y="173" key="FileChooserDialogImpl" timestamp="1609080903478">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="548" y="173" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1609080903478" />
+    <state width="1492" height="224" key="GridCell.Tab.0.bottom" timestamp="1609885821477">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1492" height="224" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1609885821477" />
+    <state width="1492" height="224" key="GridCell.Tab.0.center" timestamp="1609885821477">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1492" height="224" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1609885821477" />
+    <state width="1492" height="224" key="GridCell.Tab.0.left" timestamp="1609885821477">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1492" height="224" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1609885821477" />
+    <state width="1492" height="224" key="GridCell.Tab.0.right" timestamp="1609885821477">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state width="1492" height="224" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1609885821477" />
     <state width="189" height="457" key="HiddenNamespacesPopup" timestamp="1609700354418">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
@@ -367,10 +395,10 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="277" y="77" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1607191855157" />
-    <state x="361" y="165" key="Vcs.Push.Dialog.v2" timestamp="1609804770548">
+    <state x="361" y="165" key="Vcs.Push.Dialog.v2" timestamp="1609878402336">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="361" y="165" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1609804770548" />
+    <state x="361" y="165" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1609878402336" />
     <state x="486" y="204" key="refactoring.ChangeSignatureDialog" timestamp="1609724437470">
       <screen x="0" y="0" width="1536" height="864" />
     </state>

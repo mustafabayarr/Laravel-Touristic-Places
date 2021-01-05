@@ -1,7 +1,12 @@
 @extends('back.layouts.dashboard')
 @section('title','Add Place')
 
+@section('styles')
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
+@endsection
+
 @section('content')
+
     <div class="container">
         <div class="card o-hidden border-0 shadow-lg my-5">
             <div class="card-body p-0">
@@ -12,7 +17,8 @@
                             <div class="text-center">
                                 <h1 class="h4 text-gray-900 mb-4">Add a Place!</h1>
                             </div>
-                            <form class="user" action="{{route('admin_places_store')}}" method="POST" enctype="multipart/form-data">
+                            <form class="user" action="{{route('admin_places_store')}}" method="POST"
+                                  enctype="multipart/form-data">
                                 @csrf
                                 <div class="form-group">
                                     <label for="exampleFormControlSelect1">Category</label>
@@ -34,15 +40,17 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleFormControlInput1">Keywords</label>
-                                    <input type="text" class="form-control" name="keywords" id="exampleFormControlInput1">
+                                    <input type="text" class="form-control" name="keywords"
+                                           id="exampleFormControlInput1">
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleFormControlInput1">Description</label>
-                                    <input type="text" class="form-control" name="description" id="exampleFormControlInput1">
+                                    <input type="text" class="form-control" name="description"
+                                           id="exampleFormControlInput1">
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleFormControlInput1">Details</label>
-                                    <input type="text" class="form-control" name="details" id="exampleFormControlInput1">
+                                    <textarea id="summernote" name="details" value="details"></textarea>
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleFormControlInput1">Image</label>
@@ -61,10 +69,11 @@
                                     <input type="text" class="form-control" name="city"
                                            id="exampleFormControlInput1">
                                 </div>
-                                    <div class="form-group">
-                                        <label for="exampleFormControlInput1">Location</label>
-                                        <input type="text" class="form-control" name="location" id="exampleFormControlInput1">
-                                    </div>
+                                <div class="form-group">
+                                    <label for="exampleFormControlInput1">Location</label>
+                                    <input type="text" class="form-control" name="location"
+                                           id="exampleFormControlInput1">
+                                </div>
                                 <div class="form-group">
                                     <label for="exampleFormControlSelect1">Status</label>
                                     <select class="form-control" name="status" id="exampleFormControlSelect1">
@@ -75,6 +84,7 @@
                                 </div>
                                 <button type="submit" class="btn btn-primary">Add Place</button>
                             </form>
+
                         </div>
                     </div>
                 </div>
@@ -83,3 +93,14 @@
     </div>
 @endsection
 
+@section('scripts')
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
+    <script>
+        $('#summernote').summernote({
+            placeholder: 'Hello Bootstrap 4',
+            tabsize: 2,
+            height: 100
+        });
+    </script>
+@endsection
