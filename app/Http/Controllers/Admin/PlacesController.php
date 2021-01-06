@@ -44,20 +44,22 @@ class PlacesController extends Controller
      */
     public function store(Request $request)
     {
-        DB::table('places')->insert([
-            'category_id' => $request->input('category_id'),
-            'title' => $request->input('title'),
-            'slug' => $request->input('slug'),
-            'keywords' => $request->input('keywords'),
-            'description' => $request->input('description'),
-            'image' => Storage::putFile('images', $request->file('image')),
-            'details' => $request->input('details'),
-            'city' => $request->input('city'),
-            'country' => $request->input('country'),
-            'location' => $request->input('location'),
-            'user_id' => Auth::id(),
-            'status' => $request->input('status')
-        ]);
+        $place= new Places;
+        $place->category_id = $request->input('category_id');
+        $place->title = $request->input('title');
+        $place->slug = $request->input('slug');
+        $place->keywords = $request->input('keywords');
+        $place->description = $request->input('description');
+        $place->details = $request->input('details');
+        $place->city = $request->input('city');
+        $place->country = $request->input('country');
+        $place->location = $request->input('location');
+        $place->user_id = Auth::id();
+        $place->status = $request->input('status');
+        if($request->file('image') !=null) {
+        $place->image = Storage::putFile('images', $request->file('image'));
+        }
+        $place->save();
         return redirect()->route('admin_places');
     }
 
@@ -107,7 +109,9 @@ class PlacesController extends Controller
         $place->location = $request->input('location');
         $place->user_id = Auth::id();
         $place->status = $request->input('status');
-        $place->image = Storage::putFile('images', $request->file('image'));
+        if($request->file('image') !=null) {
+            $place->image = Storage::putFile('images', $request->file('image'));
+        }
         $place->save();
         return redirect()->route('admin_places');
     }

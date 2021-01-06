@@ -51,17 +51,15 @@
                                 <div class="form-group">
                                     <div class="form-group">
                                         <label for="exampleFormControlInput1">Details</label>
-                                        <textarea id="summernote" name="details" value="{{$place->details}}"></textarea>
+                                        <textarea id="summernote" name="details">{{$place->details}}</textarea>
                                     </div>
 
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleFormControlInput1">Image</label>
-                                    <input type="file" class="form-control" name="image" value="{{$place->image}}"
+                                    <input type="file" class="form-control" name="image"
                                            id="exampleFormControlInput1">
-
                                     <img src="{{Storage::url($place->image)}}" height="100" alt=""/>
-
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleFormControlInput1">Country</label>
@@ -82,7 +80,7 @@
                                 <div class="form-group">
                                     <label for="exampleFormControlSelect1">Status</label>
                                     <select class="form-control" name="status" id="exampleFormControlSelect1">
-                                        <option value="{{$place->status}}"></option>
+                                        <option>{{$place->status}}</option>
                                         <option>True</option>
                                         <option>False</option>
                                     </select>
@@ -101,9 +99,18 @@
     <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
     <script>
         $('#summernote').summernote({
-            placeholder: 'Hello Bootstrap 4',
+            placeholder: 'Hello stand alone ui',
             tabsize: 2,
-            height: 100
+            height: 120,
+            toolbar: [
+                ['style', ['style']],
+                ['font', ['bold', 'underline', 'clear']],
+                ['color', ['color']],
+                ['para', ['ul', 'ol', 'paragraph']],
+                ['table', ['table']],
+                ['insert', ['link', 'picture', 'video']],
+                ['view', ['fullscreen', 'codeview', 'help']]
+            ]
         });
     </script>
 @endsection

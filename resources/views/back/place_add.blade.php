@@ -50,7 +50,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleFormControlInput1">Details</label>
-                                    <textarea id="summernote" name="details" value="details"></textarea>
+                                    <textarea id="summernote" name="details"></textarea>
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleFormControlInput1">Image</label>
