@@ -4,4 +4,3 @@
 @section('content')
     @include('back.layouts.content')
 @endsection
-

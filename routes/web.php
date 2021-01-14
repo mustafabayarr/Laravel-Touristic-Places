@@ -21,6 +21,13 @@ Route::middleware(['auth'])->prefix('admin')->group(function () {
     Route::post('/category/update/{id}',[App\Http\Controllers\Admin\CategoryController::class,'update'])->name('admin_category_update');
     Route::get('/category/destroy/{id}',[App\Http\Controllers\Admin\CategoryController::class,'destroy'])->name('admin_category_destroy');
 
+    Route::prefix('image')->group(function(){
+        //create ve store daki id ler places taki idler oluyor. delete deki id image teki oluyor
+        Route::get('/create/{places_id}',[App\Http\Controllers\Admin\ImageController::class,'create'])->name('admin_image_create');
+        Route::post('/store/{places_id}',[App\Http\Controllers\Admin\ImageController::class,'store'])->name('admin_image_store');
+        Route::get('/delete/{id}/{places_id}',[App\Http\Controllers\Admin\ImageController::class,'destroy'])->name('admin_image_destroy');
+    });
+
     Route::prefix('places')->group(function(){
         Route::get('/',[App\Http\Controllers\Admin\PlacesController::class,'index'])->name('admin_places');
         Route::get('/create',[App\Http\Controllers\Admin\PlacesController::class,'create'])->name('admin_places_create');
@@ -30,6 +37,8 @@ Route::middleware(['auth'])->prefix('admin')->group(function () {
         Route::post('/update/{id}',[App\Http\Controllers\Admin\PlacesController::class,'update'])->name('admin_places_update');
         Route::get('/destroy/{id}',[App\Http\Controllers\Admin\PlacesController::class,'destroy'])->name('admin_places_destroy');
     });
+
+
 });
 
 

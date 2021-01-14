@@ -1,5 +1,5 @@
 @extends('back.layouts.dashboard')
-@section('title','Categories')
+@section('title','Places')
 
 @section('content')
     <!-- Begin Page Content -->
@@ -29,6 +29,7 @@
                                 <th>Category</th>
                                 <th>Title</th>
                                 <th>Image</th>
+                                <th>Gallery</th>
                                 <th>Country</th>
                                 <th>City</th>
                                 <th>Status</th>
@@ -43,8 +44,18 @@
                                     <td>{{$rs->title}}</td>
                                     <td>
                                         @if($rs->image)
-                                            <img src="{{Storage::url($rs->image)}}" height="100" alt=""/>
+                                            <img src="{{Storage::url($rs->image)}}" height="60" alt="image"/>
                                         @endif
+                                    </td>
+                                    <td>
+                                        <div align="center">
+                                            <a href="{{route('admin_image_create',['places_id' => $rs->id])}}"
+                                               onclick="return !window.open(this.href,'','top=50,left=100,width=1100,height=700')"
+                                               class="btn btn-info btn-success" >
+
+                                                <i class="far fa-images"></i>
+                                            </a>
+                                        </div>
                                     </td>
                                     <td>{{$rs->country}}</td>
                                     <td>{{$rs->city}}</td>
@@ -70,6 +81,7 @@
                                 <th>Category</th>
                                 <th>Title</th>
                                 <th>Image</th>
+                                <th>Gallery</th>
                                 <th>Country</th>
                                 <th>City</th>
                                 <th>Status</th>

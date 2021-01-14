@@ -21,10 +21,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b0f050f8-dbca-439a-8b7a-0f51371d573c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/ImageController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Image.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_01_06_180642_create_images_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/back/image_add.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/PlacesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/PlacesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/back/place_add.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/back/place_add.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/back/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/back/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/back/place_edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/back/place_edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/back/places.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/back/places.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -178,15 +184,15 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\MustafaBayar\Laravel1Jet\resources\views\back" />
-      <recent name="C:\Users\MustafaBayar\Laravel1Jet\resources\views\back\layouts" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\MustafaBayar\Laravel1Jet\resources\views\back\layouts" />
       <recent name="C:\Users\MustafaBayar\Laravel1Jet\resources\views\back" />
       <recent name="C:\Users\MustafaBayar\Laravel1Jet\resources\views\front" />
       <recent name="C:\Users\MustafaBayar\Laravel1Jet\resources\views\front\layouts" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\MustafaBayar\Laravel1Jet\resources\views\back" />
+      <recent name="C:\Users\MustafaBayar\Laravel1Jet\resources\views\back\layouts" />
     </key>
   </component>
   <component name="RunManager">
@@ -217,7 +223,11 @@
       <workItem from="1609695758648" duration="8919000" />
       <workItem from="1609717924194" duration="8959000" />
       <workItem from="1609780930958" duration="16916000" />
-      <workItem from="1609869261907" duration="20816000" />
+      <workItem from="1609869261907" duration="21075000" />
+      <workItem from="1609950339747" duration="7571000" />
+      <workItem from="1610578363563" duration="11842000" />
+      <workItem from="1610593511544" duration="850000" />
+      <workItem from="1610640866577" duration="5570000" />
     </task>
     <task id="LOCAL-00001" summary="beginning to project">
       <created>1608585665541</created>
@@ -310,7 +320,14 @@
       <option name="project" value="LOCAL" />
       <updated>1609890881763</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="fixed hasName() error">
+      <created>1609893312904</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1609893312904</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -342,7 +359,8 @@
     <MESSAGE value="listing admin/places - editing and deleting was created" />
     <MESSAGE value="admin/places - image was created" />
     <MESSAGE value="added summernote" />
-    <option name="LAST_COMMIT_MESSAGE" value="added summernote" />
+    <MESSAGE value="fixed hasName() error" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed hasName() error" />
   </component>
   <component name="WindowStateProjectService">
     <state x="578" y="312" key="#Composer" timestamp="1607186413273">
@@ -353,14 +371,14 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="361" y="91" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.864@0.0.1536.864" timestamp="1609700321690" />
-    <state x="499" y="187" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1609801680368">
+    <state x="499" y="187" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1609967453818">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="499" y="187" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.864@0.0.1536.864" timestamp="1609801680368" />
-    <state x="393" y="1" key="CommitChangelistDialog2" timestamp="1609890880923">
+    <state x="499" y="187" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.864@0.0.1536.864" timestamp="1609967453818" />
+    <state x="393" y="1" key="CommitChangelistDialog2" timestamp="1609893312295">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="393" y="1" key="CommitChangelistDialog2/0.0.1536.864@0.0.1536.864" timestamp="1609890880923" />
+    <state x="393" y="1" key="CommitChangelistDialog2/0.0.1536.864@0.0.1536.864" timestamp="1609893312295" />
     <state x="548" y="173" key="FileChooserDialogImpl" timestamp="1609080903478">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
@@ -397,10 +415,10 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="277" y="77" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1607191855157" />
-    <state x="361" y="165" key="Vcs.Push.Dialog.v2" timestamp="1609890885233">
+    <state x="361" y="165" key="Vcs.Push.Dialog.v2" timestamp="1609893317234">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="361" y="165" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1609890885233" />
+    <state x="361" y="165" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1609893317234" />
     <state x="486" y="204" key="refactoring.ChangeSignatureDialog" timestamp="1609724437470">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
