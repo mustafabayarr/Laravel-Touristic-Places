@@ -19,7 +19,8 @@ class PlacesController extends Controller
      */
     public function index()
     {
-        $places_list = DB::table('places')->get();
+        //$places_list = DB::table('places')->get();
+        $places_list = Places::all();
         return view('back.places', ['places_list' => $places_list]);
 
     }
