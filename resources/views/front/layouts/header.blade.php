@@ -24,6 +24,8 @@
 </head>
 
 <body>
+
+
 <!-- Preloader Start -->
 <div id="preloader-active">
     <div class="preloader d-flex align-items-center justify-content-center">
@@ -37,7 +39,11 @@
 </div>
 <!-- Preloader Start -->
 <header>
-    <!-- Header Start -->
+    <!--call categorylist function from HomeController-->
+@php
+    $parentCategories = \App\Http\Controllers\HomeController::categoryList()
+@endphp
+<!-- Header Start -->
     <div class="header-area header-transparent">
         <div class="main-header">
             <div class="header-bottom  header-sticky">
@@ -46,17 +52,37 @@
                         <!-- Logo -->
                         <div class="col-xl-2 col-lg-2 col-md-1">
                             <div class="logo">
-                                <a href="{{route('homepage')}}"><img src="{{asset('front/')}}/assets/img/logo/logo.png" alt=""></a>
+                                <a href="{{route('homepage')}}"><img src="{{asset('front/')}}/assets/img/logo/logo.png"
+                                                                     alt=""></a>
                             </div>
                         </div>
+                        @php
+                            $parentCategories = \App\Http\Controllers\HomeController::categoryList()
+                        @endphp
                         <div class="col-xl-10 col-lg-10 col-md-8">
                             <!-- Main-menu -->
                             <div class="main-menu f-right d-none d-lg-block">
                                 <nav>
                                     <ul id="navigation">
                                         <li><a href="{{route('homepage')}}">Home</a></li>
-                                        <li><a href="{{route('about')}}">About</a></li>
-                                        <li><a href="{{route('categories')}}">Catagories</a></li>
+                                        <li class="nav-item dropdown">
+                                        <li><a class="nav-link dropdown-toggle"
+                                               id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+                                               aria-expanded="false"
+                                               href="{{route('categories')}}">Categories</a>
+
+                                            <ul class="nav-item dropdown submenu">
+                                                @foreach($parentCategories as $rs)
+                                                    <li><a>{{$rs->title}}</a>
+                                                        @if(count($rs->children))
+                                                            @include('front.widgets._categoryTreeWidget',['children'=> $rs->children])
+                                                        @endif
+                                                    </li>
+                                                    @endforeach
+                                            </ul>
+
+                                        </li>
+                                        </li>
                                         <li><a href="{{route('listing')}}">Listing</a></li>
                                         <li><a href="#">Page</a>
                                             <ul class="submenu">
@@ -66,8 +92,10 @@
                                                 <li><a href="{{route('listing_details')}}">Listing details</a></li>
                                             </ul>
                                         </li>
+                                        <li><a href="{{route('about')}}">About</a></li>
                                         <li><a href="{{route('contact')}}">Contact</a></li>
-                                        <li class="add-list"><a href="{{route('listing_details')}}"><i class="ti-plus"></i> add Listing</a></li>
+                                        <li class="add-list"><a href="{{route('listing_details')}}"><i
+                                                    class="ti-plus"></i> add Listing</a></li>
                                         <li class="login"><a href="#">
                                                 <i class="ti-user"></i> Sign in or Register</a>
                                         </li>

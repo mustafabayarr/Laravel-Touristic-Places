@@ -19,7 +19,8 @@
                                     <label for="exampleFormControlSelect1">Parent</label>
                                     <select class="form-control" name="parent_id" id="exampleFormControlSelect1">
                                         @foreach($category_list as $rs)
-                                            <option value="{{$rs->id}}" @if($rs->id == $category->parent_id) selected="selected" @endif>{{$rs->title}}</option>
+                                            <option value="{{$rs->id}}" @if($rs->id == $category->parent_id) selected="selected" @endif>
+                                                {{\App\Http\Controllers\Admin\CategoryController::getParentsTree($rs,$rs->title)}}</option>
                                         @endforeach
 
                                     </select>

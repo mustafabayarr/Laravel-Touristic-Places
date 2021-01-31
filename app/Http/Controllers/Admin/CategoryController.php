@@ -9,6 +9,17 @@ use Illuminate\Support\Facades\DB;
 
 class CategoryController extends Controller
 {
+    protected $appends = [
+        'getParentsTree',
+    ];
+    public static function getParentsTree($category,$title){
+        if($category->parent_id == 0){
+            return $title;
+        }
+        $parent = Category::find($category->parent_id);
+        $title = $parent->title . ' > ' . $title;
+        return CategoryController::getParentsTree($parent,$title);
+    }
     /**
      * Display a listing of the resource.
      *
@@ -17,7 +28,7 @@ class CategoryController extends Controller
     public function index()
     {
         //$category_list = DB::table('categories')->get();
-        $category_list = Category::all();
+        $category_list = Category::with('children')->get();
         return view('back.category', ['category_list' => $category_list]);
     }
 
@@ -28,7 +39,8 @@ class CategoryController extends Controller
      */
     public function add()
     {
-        $category_list = DB::table('categories')->where('parent_id', 0)->get();
+       // $category_list = DB::table('categories')->where('parent_id', 0)->get();
+        $category_list = Category::with('children')->get();
         return view('back.category_add', ['category_list' => $category_list]);
     }
 
@@ -85,7 +97,8 @@ class CategoryController extends Controller
     public function edit(Category $category, $id)
     {
         $category = Category::find($id);
-        $category_list = DB::table('categories')->where('parent_id', 0)->get();
+        //$category_list = DB::table('categories')->where('parent_id', 0)->get();
+        $category_list = Category::with('children')->get();
         return view('back.category_edit', ['category_list' => $category_list, 'category' => $category]);
     }
 

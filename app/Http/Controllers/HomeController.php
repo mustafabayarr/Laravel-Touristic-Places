@@ -4,8 +4,14 @@ namespace App\Http\Controllers;
 
 
 
+use App\Models\Category;
+
 class HomeController extends Controller
 {
+
+    public static function categoryList(){
+        return Category::where('parent_id', '=', 0)->with('children')->get();
+    }
     /**
      * Display a listing of the resource.
      *

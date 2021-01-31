@@ -23,7 +23,8 @@
                                     <select class="form-control" name="category_id" id="exampleFormControlSelect1">
                                         @foreach($place_list as $rs)
                                             <option value="{{$rs->id}}"
-                                                    @if($rs->id == $place->category_id) selected="selected" @endif>{{$rs->title}}</option>
+                                                    @if($rs->id == $place->category_id) selected="selected" @endif>
+                                                {{\App\Http\Controllers\Admin\CategoryController::getParentsTree($rs,$rs->title)}}</option>
                                         @endforeach
 
                                     </select>

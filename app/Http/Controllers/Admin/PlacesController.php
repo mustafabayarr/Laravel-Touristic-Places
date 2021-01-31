@@ -32,7 +32,8 @@ class PlacesController extends Controller
      */
     public function create()
     {
-        $places_list = DB::table('categories')->get()->where('parent_id',0);
+        //$places_list = DB::table('categories')->get()->where('parent_id',0);
+        $places_list = Category::with('children')->get();
         return view('back.place_add', ['places_list' => $places_list]);
     }
 
@@ -83,7 +84,8 @@ class PlacesController extends Controller
     public function edit(Places $places,$id)
     {
         $place = Places::find($id);
-        $place_list = DB::table('categories')->get()->where('parent_id',0);
+        //$place_list = DB::table('categories')->get()->where('parent_id',0);
+        $place_list = Category::with('children')->get();
         return view('back.place_edit', ['place_list' => $place_list, 'place' => $place]);
     }
 

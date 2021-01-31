@@ -21,19 +21,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b0f050f8-dbca-439a-8b7a-0f51371d573c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/SettingController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Setting.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_01_29_174951_create_settings_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_01_29_175927_setting.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/back/setting_edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/front/widgets/_categoryTreeWidget.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/CategoryController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/PlacesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/PlacesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Category.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Places.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Places.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/back/layouts/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/back/layouts/sidebar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/back/category.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/back/category.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/back/category_add.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/back/category_add.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/back/category_edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/back/category_edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/back/place_add.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/back/place_add.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/back/place_edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/back/place_edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/back/places.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/back/places.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/front/categories.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/categories.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/front/layouts/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/layouts/header.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -231,7 +232,9 @@
       <workItem from="1610578363563" duration="11842000" />
       <workItem from="1610593511544" duration="850000" />
       <workItem from="1610640866577" duration="5926000" />
-      <workItem from="1611941162105" duration="13115000" />
+      <workItem from="1611941162105" duration="13439000" />
+      <workItem from="1612035638981" duration="12278000" />
+      <workItem from="1612118148706" duration="3798000" />
     </task>
     <task id="LOCAL-00001" summary="beginning to project">
       <created>1608585665541</created>
@@ -338,7 +341,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610646603435</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="added admin settings">
+      <created>1611960120901</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1611960120901</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -372,7 +382,8 @@
     <MESSAGE value="added summernote" />
     <MESSAGE value="fixed hasName() error" />
     <MESSAGE value="added image gallery" />
-    <option name="LAST_COMMIT_MESSAGE" value="added image gallery" />
+    <MESSAGE value="added admin settings" />
+    <option name="LAST_COMMIT_MESSAGE" value="added admin settings" />
   </component>
   <component name="WindowStateProjectService">
     <state x="578" y="312" key="#Composer" timestamp="1607186413273">
@@ -387,10 +398,10 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="499" y="187" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.864@0.0.1536.864" timestamp="1611951705993" />
-    <state x="393" y="1" key="CommitChangelistDialog2" timestamp="1610646602634">
+    <state x="393" y="1" key="CommitChangelistDialog2" timestamp="1611960120136">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="393" y="1" key="CommitChangelistDialog2/0.0.1536.864@0.0.1536.864" timestamp="1610646602634" />
+    <state x="393" y="1" key="CommitChangelistDialog2/0.0.1536.864@0.0.1536.864" timestamp="1611960120136" />
     <state x="548" y="173" key="FileChooserDialogImpl" timestamp="1609080903478">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
@@ -419,18 +430,18 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="501" y="155" key="NewPhpClassDialog/0.0.1536.864@0.0.1536.864" timestamp="1609875574878" />
-    <state x="602" y="368" key="NewPhpFileDialog" timestamp="1609179419118">
+    <state x="602" y="368" key="NewPhpFileDialog" timestamp="1612044719478">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="602" y="368" key="NewPhpFileDialog/0.0.1536.864@0.0.1536.864" timestamp="1609179419118" />
+    <state x="602" y="368" key="NewPhpFileDialog/0.0.1536.864@0.0.1536.864" timestamp="1612044719478" />
     <state x="277" y="77" key="SettingsEditor" timestamp="1607191855157">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="277" y="77" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1607191855157" />
-    <state x="361" y="165" key="Vcs.Push.Dialog.v2" timestamp="1610646608324">
+    <state x="361" y="165" key="Vcs.Push.Dialog.v2" timestamp="1611960137617">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="361" y="165" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1610646608324" />
+    <state x="361" y="165" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1611960137617" />
     <state x="486" y="204" key="refactoring.ChangeSignatureDialog" timestamp="1609724437470">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
