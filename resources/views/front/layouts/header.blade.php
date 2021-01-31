@@ -4,7 +4,8 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>@yield('title')</title>
-    <meta name="description" content="">
+    <meta name="keywords" content="@yield('keywords')">
+    <meta name="description" content="@yield('description')">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="manifest" href="{{asset('front/')}}/site.webmanifest">
     <link rel="shortcut icon" type="image/x-icon" href="{{asset('front/')}}/assets/img/favicon.ico">
@@ -78,7 +79,7 @@
                                                             @include('front.widgets._categoryTreeWidget',['children'=> $rs->children])
                                                         @endif
                                                     </li>
-                                                    @endforeach
+                                                @endforeach
                                             </ul>
 
                                         </li>
@@ -96,9 +97,16 @@
                                         <li><a href="{{route('contact')}}">Contact</a></li>
                                         <li class="add-list"><a href="{{route('listing_details')}}"><i
                                                     class="ti-plus"></i> add Listing</a></li>
-                                        <li class="login"><a href="#">
-                                                <i class="ti-user"></i> Sign in or Register</a>
-                                        </li>
+                                        @auth
+                                            <li class="login"><a href="{{route('admin_login')}}">
+                                                    <i class="ti-user"></i> {{Auth::user()->name}}</a></li>
+                                        @endauth
+                                        @guest
+                                                    <li class="login"><a href="{{route('admin_login')}}">
+                                                        <i class="ti-user"></i> Sign in or Register</a></li>
+                                            @endguest
+
+
                                     </ul>
                                 </nav>
                             </div>

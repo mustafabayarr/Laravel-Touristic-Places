@@ -5,12 +5,16 @@ namespace App\Http\Controllers;
 
 
 use App\Models\Category;
+use App\Models\Setting;
 
 class HomeController extends Controller
 {
 
     public static function categoryList(){
         return Category::where('parent_id', '=', 0)->with('children')->get();
+    }
+    public static function getSetting(){
+        return Setting::first();
     }
     /**
      * Display a listing of the resource.
@@ -19,7 +23,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('front.homepage');
+        $settings = Setting::first();
+        return view('front.homepage',['settings' => $settings]);
     }
 
     public function about(){

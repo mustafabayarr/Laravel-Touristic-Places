@@ -1,5 +1,7 @@
 @extends('front.layouts.master')
-@section('title','CityListing')
+@section('title',$settings->title)
+@section('keywords'){{$settings->keywords}}@endsection
+@section('description'){{$settings->description}}@endsection
 @section('content')
     <!-- Hero Area Start-->
     <div class="slider-area hero-overly">
