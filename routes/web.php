@@ -57,6 +57,9 @@ Route::get('/admin/logout',[App\Http\Controllers\Admin\HomeController::class,'lo
 | Front-End Routes
 |--------------------------------------------------------------------------
 */
+Route::middleware(['auth'])->prefix('my_account')->group(function () {
+    Route::get('/',[\App\Http\Controllers\UserController::class,'index'])->name('my_account');
+});
 
 Route::get('/',[App\Http\Controllers\HomeController::class,'index'])->name('homepage');
 Route::get('/about',[App\Http\Controllers\HomeController::class,'about'])->name('about');
