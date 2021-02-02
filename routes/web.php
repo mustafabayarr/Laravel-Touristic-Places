@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -58,7 +59,10 @@ Route::get('/admin/logout',[App\Http\Controllers\Admin\HomeController::class,'lo
 |--------------------------------------------------------------------------
 */
 Route::middleware(['auth'])->prefix('my_account')->group(function () {
-    Route::get('/',[\App\Http\Controllers\UserController::class,'index'])->name('my_account');
+    Route::get('/',[UserController::class,'index'])->name('my_account');
+});
+Route::middleware(['auth'])->prefix('user')->group(function () {
+    Route::get('/profile',[UserController::class,'index'])->name('user_profile');
 });
 
 Route::get('/',[App\Http\Controllers\HomeController::class,'index'])->name('homepage');
@@ -66,6 +70,7 @@ Route::get('/about',[App\Http\Controllers\HomeController::class,'about'])->name(
 Route::get('/categories',[App\Http\Controllers\HomeController::class,'categories'])->name('categories');
 Route::get('/listing',[App\Http\Controllers\HomeController::class,'listing'])->name('listing');
 Route::get('/contact',[App\Http\Controllers\HomeController::class,'contact'])->name('contact');
+Route::get('/references',[App\Http\Controllers\HomeController::class,'references'])->name('references');
 Route::get('/listing_details',[App\Http\Controllers\HomeController::class,'listing_details'])->name('listing_details');
 /*
 Route::get('/', function () {

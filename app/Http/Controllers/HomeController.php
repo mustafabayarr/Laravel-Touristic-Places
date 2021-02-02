@@ -28,7 +28,8 @@ class HomeController extends Controller
     }
 
     public function about(){
-        return view('front.about');
+        $settings = Setting::first();
+        return view('front.about',['settings' => $settings]);
     }
 
     public function categories(){
@@ -40,7 +41,12 @@ class HomeController extends Controller
     }
 
     public function contact(){
-        return view('front.contact');
+        $settings = Setting::first();
+        return view('front.contact',['settings' => $settings]);
+    }
+    public function references(){
+        $settings = Setting::first();
+        return view('front.references',['settings' => $settings]);
     }
     public function listing_details(){
         return view('front.listing_details');

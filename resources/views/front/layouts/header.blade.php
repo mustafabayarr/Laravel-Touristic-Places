@@ -85,16 +85,10 @@
                                         </li>
                                         </li>
                                         <li><a href="{{route('listing')}}">Listing</a></li>
-                                        <li><a href="#">Page</a>
-                                            <ul class="submenu">
-                                                <li><a href="blog.html">Blog</a></li>
-                                                <li><a href="blog_details.html">Blog Details</a></li>
-                                                <li><a href="elements.html">Element</a></li>
-                                                <li><a href="{{route('listing_details')}}">Listing details</a></li>
-                                            </ul>
-                                        </li>
+
                                         <li><a href="{{route('about')}}">About</a></li>
                                         <li><a href="{{route('contact')}}">Contact</a></li>
+                                        <li><a href="{{route('references')}}">References</a></li>
                                         <li class="add-list"><a href="{{route('listing_details')}}"><i
                                                     class="ti-plus"></i> add Listing</a></li>
                                         @auth

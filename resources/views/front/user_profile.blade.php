@@ -18,15 +18,13 @@
     <section class="blog_area section-padding">
         <div class="container">
             <div class="row">
-                <div class="col-lg-9 mb-5 mb-lg-0">
+                <div class="col-lg-10 mb-5 mb-lg-0">
                     <div class="blog_left_sidebar">
                         @include('profile.show')
-
-
                     </div>
                 </div>
 
-                <div class="col-lg-3">
+                <div class="col-lg-2">
                     <div class="blog_right_sidebar">
                         <aside class="single_sidebar_widget post_category_widget">
                             <h4 class="widget_title">My Account</h4>
