@@ -19,7 +19,7 @@
                         </div>
                         <div class="location-details">
                             <p>{{$rs->title}}</p>
-                            <a href="{{route('listing')}}" class="location-btn">65 <i class="ti-plus"></i> Location</a>
+                            <a href="#" class="location-btn">65 <i class="ti-plus"></i> Location</a>
                         </div>
                     </div>
             </div>

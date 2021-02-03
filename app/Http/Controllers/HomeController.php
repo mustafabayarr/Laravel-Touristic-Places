@@ -46,7 +46,9 @@ class HomeController extends Controller
     }
 
     public function listing(){
-        return view('front.listing');
+        $datalist= Places::all();
+
+        return view('front.listing',['datalist' => $datalist]);
     }
 
     public function contact(){

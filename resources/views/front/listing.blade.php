@@ -99,120 +99,27 @@
                     <div class="listing-details-area">
                         <div class="container">
                             <div class="row">
-                                <div class="col-lg-6 ">
-                                    <div class="single-listing mb-30">
-                                        <div class="list-img">
-                                            <img src="{{asset('front/')}}/assets/img/gallery/list1.png" alt="">
-                                            <!-- <span>Open</span> -->
-                                        </div>
-                                        <div class="list-caption">
-                                            <span>Open</span>
-                                            <h3><a href="{{route('listing_details')}}">Saintmartine</a></h3>
-                                            <p>700/D, Kings road, Green lane, 85/ London</p>
-                                            <div class="list-footer">
-                                                <ul>
-                                                    <li>+10 278 367 9823</li>
-                                                    <li>contact@midnight.com</li>
-                                                </ul>
+                                @foreach($datalist as $rs)
+                                    <div class="col-lg-6 ">
+                                        <div class="single-listing mb-30">
+                                            <div class="list-img">
+                                                <img src="{{Storage::url($rs->image)}}" height="205px" alt="">
+                                                <!-- <span>Open</span> -->
+                                            </div>
+                                            <div class="list-caption">
+                                                <span>Open</span>
+                                                <h3><a href="{{route('listing_details')}}">{{$rs->title}}</a></h3>
+                                                <p>{{$rs->city}} {{$rs->country}}</p>
+                                                <div class="list-footer">
+                                                    <ul>
+                                                        <li>+ 13 5 3555 66</li>
+                                                        <li>{{$rs->location}}</li>
+                                                    </ul>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="col-lg-6 ">
-                                    <div class="single-listing mb-30">
-                                        <div class="list-img">
-                                            <img src="{{asset('front/')}}/assets/img/gallery/list2.png" alt="">
-                                            <!-- <span>Open</span> -->
-                                        </div>
-                                        <div class="list-caption">
-                                            <span>Open</span>
-                                            <h3><a href="{{route('listing_details')}}">Saintmartine</a></h3>
-                                            <p>700/D, Kings road, Green lane, 85/ London</p>
-                                            <div class="list-footer">
-                                                <ul>
-                                                    <li>+10 278 367 9823</li>
-                                                    <li>contact@midnight.com</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 ">
-                                    <div class="single-listing mb-30">
-                                        <div class="list-img">
-                                            <img src="{{asset('front/')}}/assets/img/gallery/list3.png" alt="">
-                                            <!-- <span>Open</span> -->
-                                        </div>
-                                        <div class="list-caption">
-                                            <span>Open</span>
-                                            <h3><a href="{{route('listing_details')}}">Saintmartine</a></h3>
-                                            <p>700/D, Kings road, Green lane, 85/ London</p>
-                                            <div class="list-footer">
-                                                <ul>
-                                                    <li>+10 278 367 9823</li>
-                                                    <li>contact@midnight.com</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 ">
-                                    <div class="single-listing mb-30">
-                                        <div class="list-img">
-                                            <img src="{{asset('front/')}}/assets/img/gallery/list4.png" alt="">
-                                            <!-- <span>Open</span> -->
-                                        </div>
-                                        <div class="list-caption">
-                                            <span>Open</span>
-                                            <h3><a href="{{route('listing_details')}}">Saintmartine</a></h3>
-                                            <p>700/D, Kings road, Green lane, 85/ London</p>
-                                            <div class="list-footer">
-                                                <ul>
-                                                    <li>+10 278 367 9823</li>
-                                                    <li>contact@midnight.com</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 ">
-                                    <div class="single-listing mb-30">
-                                        <div class="list-img">
-                                            <img src="{{asset('front/')}}/assets/img/gallery/list5.png" alt="">
-                                            <!-- <span>Open</span> -->
-                                        </div>
-                                        <div class="list-caption">
-                                            <span>Open</span>
-                                            <h3><a href="{{route('listing_details')}}">Saintmartine</a></h3>
-                                            <p>700/D, Kings road, Green lane, 85/ London</p>
-                                            <div class="list-footer">
-                                                <ul>
-                                                    <li>+10 278 367 9823</li>
-                                                    <li>contact@midnight.com</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 ">
-                                    <div class="single-listing mb-30">
-                                        <div class="list-img">
-                                            <img src="{{asset('front/')}}/assets/img/gallery/list6.png" alt="">
-                                            <!-- <span>Open</span> -->
-                                        </div>
-                                        <div class="list-caption">
-                                            <span>Open</span>
-                                            <h3><a href="{{route('listing_details')}}">Saintmartine</a></h3>
-                                            <p>700/D, Kings road, Green lane, 85/ London</p>
-                                            <div class="list-footer">
-                                                <ul>
-                                                    <li>+10 278 367 9823</li>
-                                                    <li>contact@midnight.com</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                @endforeach
                             </div>
                         </div>
                     </div>
@@ -228,7 +135,8 @@
                                                 <li class="page-item active"><a class="page-link" href="#">01</a></li>
                                                 <li class="page-item"><a class="page-link" href="#">02</a></li>
                                                 <li class="page-item"><a class="page-link" href="#">03</a></li>
-                                                <li class="page-item"><a class="page-link" href="#"><span class="ti-angle-right"></span></a></li>
+                                                <li class="page-item"><a class="page-link" href="#"><span
+                                                            class="ti-angle-right"></span></a></li>
                                             </ul>
                                         </nav>
                                     </div>
