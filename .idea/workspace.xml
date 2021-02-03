@@ -21,19 +21,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b0f050f8-dbca-439a-8b7a-0f51371d573c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_02_01_223705_add_address_to_users.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/front/references.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/MessageController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Messages.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_02_02_194346_create_messages_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_02_02_203400_remove_vote.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_02_02_203804_add_vote_to_messages.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/back/contact_messages.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/back/contact_messages_edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/front/sendmessage.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Actions/Fortify/UpdateUserProfileInformation.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Actions/Fortify/UpdateUserProfileInformation.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/jetstream.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/jetstream.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/front/about.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/about.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/back/layouts/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/back/layouts/sidebar.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/front/contact.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/contact.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/front/layouts/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/layouts/header.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/front/user_profile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/user_profile.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/profile/update-profile-information-form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/profile/update-profile-information-form.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -181,24 +180,24 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/front" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/back" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="C:\Program Files\nodejs\node_modules\npm" />
     <property name="settings.editor.selected.configurable" value="settings.nodejs" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\MustafaBayar\Laravel1Jet\resources\views\back" />
+      <recent name="C:\Users\MustafaBayar\Laravel1Jet\resources\views\front" />
+      <recent name="C:\Users\MustafaBayar\Laravel1Jet\resources\views\layouts" />
+      <recent name="C:\Users\MustafaBayar\Laravel1Jet\resources\views\back\layouts" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\MustafaBayar\Laravel1Jet\resources\views\back\layouts" />
       <recent name="C:\Users\MustafaBayar\Laravel1Jet\resources\views\back" />
       <recent name="C:\Users\MustafaBayar\Laravel1Jet\resources\views\front" />
       <recent name="C:\Users\MustafaBayar\Laravel1Jet\resources\views\front\layouts" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\MustafaBayar\Laravel1Jet\resources\views\front" />
-      <recent name="C:\Users\MustafaBayar\Laravel1Jet\resources\views\layouts" />
-      <recent name="C:\Users\MustafaBayar\Laravel1Jet\resources\views\back" />
-      <recent name="C:\Users\MustafaBayar\Laravel1Jet\resources\views\back\layouts" />
     </key>
   </component>
   <component name="RunManager">
@@ -238,7 +237,8 @@
       <workItem from="1612035638981" duration="12278000" />
       <workItem from="1612118148706" duration="9894000" />
       <workItem from="1612185543801" duration="413000" />
-      <workItem from="1612204782692" duration="14099000" />
+      <workItem from="1612204782692" duration="15226000" />
+      <workItem from="1612290775114" duration="10902000" />
     </task>
     <task id="LOCAL-00001" summary="beginning to project">
       <created>1608585665541</created>
@@ -373,7 +373,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612210671965</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="added dynamic about us, contact and references pages">
+      <created>1612224636750</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1612224636750</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -411,7 +418,8 @@
     <MESSAGE value="added dynamic categories" />
     <MESSAGE value="added homepage settings from admin dashboard" />
     <MESSAGE value="added user panel and included jetstream" />
-    <option name="LAST_COMMIT_MESSAGE" value="added user panel and included jetstream" />
+    <MESSAGE value="added dynamic about us, contact and references pages" />
+    <option name="LAST_COMMIT_MESSAGE" value="added dynamic about us, contact and references pages" />
   </component>
   <component name="WindowStateProjectService">
     <state x="578" y="312" key="#Composer" timestamp="1607186413273">
@@ -426,10 +434,10 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="499" y="187" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.864@0.0.1536.864" timestamp="1611951705993" />
-    <state x="393" y="1" key="CommitChangelistDialog2" timestamp="1612210671243">
+    <state x="393" y="1" key="CommitChangelistDialog2" timestamp="1612224636004">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="393" y="1" key="CommitChangelistDialog2/0.0.1536.864@0.0.1536.864" timestamp="1612210671243" />
+    <state x="393" y="1" key="CommitChangelistDialog2/0.0.1536.864@0.0.1536.864" timestamp="1612224636004" />
     <state x="548" y="173" key="FileChooserDialogImpl" timestamp="1609080903478">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
@@ -458,18 +466,18 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="501" y="155" key="NewPhpClassDialog/0.0.1536.864@0.0.1536.864" timestamp="1609875574878" />
-    <state x="602" y="368" key="NewPhpFileDialog" timestamp="1612207582280">
+    <state x="602" y="368" key="NewPhpFileDialog" timestamp="1612298669120">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="602" y="368" key="NewPhpFileDialog/0.0.1536.864@0.0.1536.864" timestamp="1612207582280" />
+    <state x="602" y="368" key="NewPhpFileDialog/0.0.1536.864@0.0.1536.864" timestamp="1612298669120" />
     <state x="277" y="77" key="SettingsEditor" timestamp="1607191855157">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="277" y="77" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1607191855157" />
-    <state x="361" y="165" key="Vcs.Push.Dialog.v2" timestamp="1612210675076">
+    <state x="361" y="165" key="Vcs.Push.Dialog.v2" timestamp="1612224638955">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="361" y="165" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1612210675076" />
+    <state x="361" y="165" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1612224638955" />
     <state x="486" y="204" key="refactoring.ChangeSignatureDialog" timestamp="1609724437470">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
