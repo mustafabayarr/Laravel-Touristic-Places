@@ -89,8 +89,7 @@
                                         <li><a href="{{route('about')}}">About</a></li>
                                         <li><a href="{{route('contact')}}">Contact</a></li>
                                         <li><a href="{{route('references')}}">References</a></li>
-                                        <li class="add-list"><a href="{{route('listing_details')}}"><i
-                                                    class="ti-plus"></i> add Listing</a></li>
+
                                         @auth
                                             <li class="login"><a href="{{route('login')}}">
                                                     <i class="ti-user"></i> {{Auth::user()->name}}</a>

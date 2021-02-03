@@ -85,7 +85,7 @@ Route::get('/listing',[App\Http\Controllers\HomeController::class,'listing'])->n
 Route::get('/contact',[App\Http\Controllers\HomeController::class,'contact'])->name('contact');
 Route::post('/sendmessage',[App\Http\Controllers\HomeController::class,'sendmessage'])->name('sendmessage');
 Route::get('/references',[App\Http\Controllers\HomeController::class,'references'])->name('references');
-Route::get('/listing_details',[App\Http\Controllers\HomeController::class,'listing_details'])->name('listing_details');
+Route::get('/listing_details/{id}',[App\Http\Controllers\HomeController::class,'listing_details'])->name('listing_details');
 Route::get('/category_places/{id}/{slug}',[App\Http\Controllers\HomeController::class,'category_places'])->name('category_places');
 /*
 Route::get('/', function () {

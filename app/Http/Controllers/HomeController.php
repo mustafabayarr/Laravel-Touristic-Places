@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 
 
 use App\Models\Category;
+use App\Models\Image;
 use App\Models\Messages;
 use App\Models\Places;
 use App\Models\Setting;
@@ -38,7 +39,12 @@ class HomeController extends Controller
 
     public function about(){
         $settings = Setting::first();
-        return view('front.about',['settings' => $settings]);
+        $popular_locations = Places::select('id','title','image')->inRandomOrder()->limit(6)->get();
+        $data = [
+            'settings' => $settings,
+            'popular_locations' => $popular_locations
+        ];
+        return view('front.about',$data);
     }
 
     public function categories(){
@@ -46,8 +52,7 @@ class HomeController extends Controller
     }
 
     public function listing(){
-        $datalist= Places::all();
-
+        $datalist= Places::inRandomOrder()->get();
         return view('front.listing',['datalist' => $datalist]);
     }
 
@@ -67,10 +72,18 @@ class HomeController extends Controller
     }
     public function references(){
         $settings = Setting::first();
-        return view('front.references',['settings' => $settings]);
+        $popular_locations = Places::select('id','title','image')->inRandomOrder()->limit(6)->get();
+        $data = [
+            'settings' => $settings,
+            'popular_locations' => $popular_locations
+        ];
+        return view('front.references',$data);
     }
-    public function listing_details(){
-        return view('front.listing_details');
+    public function listing_details($id){
+        $settings = Setting::first();
+        $datalist= Places::find($id);
+        $data = Image::where('places_id',$id)->get();
+        return view('front.listing_details',['settings' => $settings,'data' => $data,'datalist' => $datalist]);
     }
     public function category_places($id,$slug){
         $datalist= Places::where('category_id',$id)->get();

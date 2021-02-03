@@ -23,9 +23,10 @@
     <list default="true" id="b0f050f8-dbca-439a-8b7a-0f51371d573c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/front/about.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/about.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/front/layouts/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/layouts/header.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/front/listing.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/listing.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/front/widgets/_popularLocationsWidget.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/widgets/_popularLocationsWidget.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/front/listing_details.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/listing_details.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -232,7 +233,7 @@
       <workItem from="1612185543801" duration="413000" />
       <workItem from="1612204782692" duration="15226000" />
       <workItem from="1612290775114" duration="13162000" />
-      <workItem from="1612369722664" duration="6852000" />
+      <workItem from="1612369722664" duration="11738000" />
     </task>
     <task id="LOCAL-00001" summary="beginning to project">
       <created>1608585665541</created>
@@ -388,7 +389,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612379571447</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="added dynamic our listing">
+      <created>1612380896547</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1612380896547</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -429,7 +437,8 @@
     <MESSAGE value="added dynamic about us, contact and references pages" />
     <MESSAGE value="added dynamic contact form and contact messages at the admin panel" />
     <MESSAGE value="added dynamic home popular locations and category places" />
-    <option name="LAST_COMMIT_MESSAGE" value="added dynamic home popular locations and category places" />
+    <MESSAGE value="added dynamic our listing" />
+    <option name="LAST_COMMIT_MESSAGE" value="added dynamic our listing" />
   </component>
   <component name="WindowStateProjectService">
     <state x="578" y="312" key="#Composer" timestamp="1607186413273">
@@ -444,10 +453,10 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="499" y="187" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.864@0.0.1536.864" timestamp="1611951705993" />
-    <state x="393" y="1" key="CommitChangelistDialog2" timestamp="1612379570572">
+    <state x="393" y="1" key="CommitChangelistDialog2" timestamp="1612380895863">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="393" y="1" key="CommitChangelistDialog2/0.0.1536.864@0.0.1536.864" timestamp="1612379570572" />
+    <state x="393" y="1" key="CommitChangelistDialog2/0.0.1536.864@0.0.1536.864" timestamp="1612380895863" />
     <state x="548" y="173" key="FileChooserDialogImpl" timestamp="1609080903478">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
@@ -484,10 +493,10 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="277" y="77" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1607191855157" />
-    <state x="361" y="165" key="Vcs.Push.Dialog.v2" timestamp="1612379573617">
+    <state x="361" y="165" key="Vcs.Push.Dialog.v2" timestamp="1612380924578">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="361" y="165" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1612379573617" />
+    <state x="361" y="165" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1612380924578" />
     <state x="486" y="204" key="refactoring.ChangeSignatureDialog" timestamp="1609724437470">
       <screen x="0" y="0" width="1536" height="864" />
     </state>

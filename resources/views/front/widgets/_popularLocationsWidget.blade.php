@@ -28,7 +28,7 @@
         <!-- More Btn -->
             <div class="row justify-content-center">
                 <div class="room-btn pt-20">
-                    <a href="catagori.html" class="btn view-btn1">View All Places</a>
+                    <a href="{{route('listing')}}" class="btn view-btn1">View All Places</a>
                 </div>
             </div>
         </div>
