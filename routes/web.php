@@ -86,6 +86,7 @@ Route::get('/contact',[App\Http\Controllers\HomeController::class,'contact'])->n
 Route::post('/sendmessage',[App\Http\Controllers\HomeController::class,'sendmessage'])->name('sendmessage');
 Route::get('/references',[App\Http\Controllers\HomeController::class,'references'])->name('references');
 Route::get('/listing_details',[App\Http\Controllers\HomeController::class,'listing_details'])->name('listing_details');
+Route::get('/category_places/{id}/{slug}',[App\Http\Controllers\HomeController::class,'category_places'])->name('category_places');
 /*
 Route::get('/', function () {
     return view('welcome');

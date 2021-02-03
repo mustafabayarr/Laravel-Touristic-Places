@@ -5,7 +5,7 @@
             @include('front.widgets._categoryTreeWidget',['children' => $subcategory->children])
 
         @else
-            <li><a href="#" style="display:inline-block; padding-bottom: 0; padding-top: 0;">{{$subcategory->title}}</a></li>
+            <li><a href="{{route('category_places',['id'=>$subcategory->id,'slug'=>$subcategory->slug])}}" style="display:inline-block; padding-bottom: 0; padding-top: 0;">{{$subcategory->title}}</a></li>
         @endif
     @endforeach
 </ul>

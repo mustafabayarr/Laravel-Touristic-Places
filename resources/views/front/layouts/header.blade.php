@@ -7,7 +7,7 @@
     <meta name="keywords" content="@yield('keywords')">
     <meta name="description" content="@yield('description')">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="manifest" href="{{asset('front/')}}/site.webmanifest">
+    <link rel="manifest" href="{{asset('front/assets/')}}/site.webmanifest">
     <link rel="shortcut icon" type="image/x-icon" href="{{asset('front/')}}/assets/img/favicon.ico">
 
     <!-- CSS here -->

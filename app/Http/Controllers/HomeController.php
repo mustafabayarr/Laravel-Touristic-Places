@@ -6,6 +6,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Category;
 use App\Models\Messages;
+use App\Models\Places;
 use App\Models\Setting;
 use Illuminate\Http\Request;
 
@@ -27,7 +28,12 @@ class HomeController extends Controller
     public function index()
     {
         $settings = Setting::first();
-        return view('front.homepage',['settings' => $settings]);
+        $popular_locations = Places::select('id','title','image')->inRandomOrder()->limit(6)->get();
+        $data = [
+            'settings' => $settings,
+            'popular_locations' => $popular_locations
+        ];
+        return view('front.homepage',$data);
     }
 
     public function about(){
@@ -63,6 +69,11 @@ class HomeController extends Controller
     }
     public function listing_details(){
         return view('front.listing_details');
+    }
+    public function category_places($id,$slug){
+        $datalist= Places::where('category_id',$id)->get();
+        $data = Category::find($id);
+        return view('front.category_places',['datalist' => $datalist,'data' => $data]);
     }
 
 
