@@ -14,9 +14,7 @@
                             <span>Explore the city</span>
                             <h1>Discover Great Places</h1>
                         </div>
-                        <form action="#" class="search-box">
                             @include('front.widgets._searchBoxWidget')
-                        </form>
                     </div>
                 </div>
             </div>

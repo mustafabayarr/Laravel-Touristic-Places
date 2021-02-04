@@ -90,6 +90,10 @@ class HomeController extends Controller
         $data = Category::find($id);
         return view('front.category_places',['datalist' => $datalist,'data' => $data]);
     }
+    public function get_places(Request $request){
+        $data = Places::where('title',$request->input('search'))->first();
+        return redirect()->route('listing_details',['id'=>$data->id]);
+    }
 
 
 

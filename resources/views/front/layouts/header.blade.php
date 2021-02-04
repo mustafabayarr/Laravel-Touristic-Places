@@ -83,9 +83,8 @@
                                             </ul>
 
                                         </li>
-                                        </li>
-                                        <li><a href="{{route('listing')}}">Listing</a></li>
 
+                                        <li><a href="{{route('listing')}}">Listing</a></li>
                                         <li><a href="{{route('about')}}">About</a></li>
                                         <li><a href="{{route('contact')}}">Contact</a></li>
                                         <li><a href="{{route('references')}}">References</a></li>

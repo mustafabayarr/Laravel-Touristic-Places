@@ -1,7 +1,8 @@
 <!--Hero form -->
-
+<form action="{{route('get_places')}}" method="post" class="search-box">
+    @csrf
     <div class="input-form">
-        <input type="text" placeholder="What are you looking for?">
+        @livewire('search')
     </div>
     <div class="select-form">
         <div class="select-itms">
@@ -15,6 +16,7 @@
         </div>
     </div>
     <div class="search-form">
-        <a href="#">Search</a>
+        <button type="submit">Search</button>
     </div>
-
+</form>
+@livewireScripts

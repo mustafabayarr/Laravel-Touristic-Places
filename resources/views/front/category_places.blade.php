@@ -108,7 +108,7 @@
                                         </div>
                                         <div class="list-caption">
                                             <span>Open</span>
-                                            <h3><a href="{{route('listing_details')}}">{{$rs->title}}</a></h3>
+                                            <h3><a href="{{route('listing_details',['id' => $rs->id])}}">{{$rs->title}}</a></h3>
                                             <p>{{$rs->city}} {{$rs->country}}</p>
                                             <div class="list-footer">
                                                 <ul>
