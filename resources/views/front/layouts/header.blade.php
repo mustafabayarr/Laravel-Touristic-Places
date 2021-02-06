@@ -94,8 +94,7 @@
                                                     <i class="ti-user"></i> {{Auth::user()->name}}</a>
                                                 <ul class="submenu">
                                                     <li><a href="{{route('my_account')}}">My Account</a></li>
-                                                    <li><a href="blog_details.html">Orders</a></li>
-                                                    <li><a href="elements.html">Reviews</a></li>
+                                                    <li><a href="{{route('my_reviews')}}">Reviews</a></li>
                                                     <li><a href="elements.html">Messages</a></li>
                                                     <li><a href="{{route('admin_logout')}}">Logout</a></li>
                                                 </ul>
@@ -106,10 +105,6 @@
                                                     <i class="ti-user"></i> Sign in or Register</a>
                                                 <ul class="submenu">
                                                     <li><a href="{{route('my_account')}}">My Account</a></li>
-                                                    <li><a href="blog_details.html">Orders</a></li>
-                                                    <li><a href="elements.html">Reviews</a></li>
-                                                    <li><a href="elements.html">Messages</a></li>
-                                                    <li><a href="{{route('admin_logout')}}">Logout</a></li>
                                                 </ul>
                                             </li>
                                         @endguest

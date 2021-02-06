@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\HomeController;
 use App\Http\Controllers\Admin\MessageController;
+use App\Http\Controllers\Admin\ReviewController;
 use App\Http\Controllers\Admin\SettingController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
@@ -51,6 +52,13 @@ Route::middleware(['auth'])->prefix('admin')->group(function () {
         Route::post('/update/{id}',[MessageController::class,'update'])->name('admin_message_update');
         Route::get('/destroy/{id}',[MessageController::class,'destroy'])->name('admin_message_destroy');
     });
+    //Messages
+    Route::prefix('reviews')->group(function(){
+        Route::get('/',[ReviewController::class,'index'])->name('admin_review');
+        Route::get('/show/{id}',[ReviewController::class,'show'])->name('admin_review_show');
+        Route::post('/update/{id}',[ReviewController::class,'update'])->name('admin_review_update');
+        Route::get('/destroy/{id}',[ReviewController::class,'destroy'])->name('admin_review_destroy');
+    });
     //Setting
     Route::get('/setting',[SettingController::class,'index'])->name('admin_setting');
     Route::post('/setting/update',[SettingController::class,'update'])->name('admin_setting_update');
@@ -71,9 +79,12 @@ Route::get('/admin/logout',[HomeController::class,'logout'])->name('admin_logout
 | Front-End Routes
 |--------------------------------------------------------------------------
 */
-Route::middleware(['auth'])->prefix('my_account')->group(function () {
+Route::middleware(['auth'])->prefix('my_account')->namespace('my_account')->group(function () {
     Route::get('/',[UserController::class,'index'])->name('my_account');
+    Route::get('/my_reviews',[UserController::class,'my_reviews'])->name('my_reviews');
+    Route::get('/destroy/{id}',[UserController::class,'destroy'])->name('reviews_destroy');
 });
+
 Route::middleware(['auth'])->prefix('user')->group(function () {
     Route::get('/profile',[UserController::class,'index'])->name('user_profile');
 });

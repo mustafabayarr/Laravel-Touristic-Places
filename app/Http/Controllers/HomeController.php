@@ -8,6 +8,7 @@ use App\Models\Category;
 use App\Models\Image;
 use App\Models\Messages;
 use App\Models\Places;
+use App\Models\Review;
 use App\Models\Setting;
 use Illuminate\Http\Request;
 
@@ -83,7 +84,8 @@ class HomeController extends Controller
         $settings = Setting::first();
         $datalist= Places::find($id);
         $data = Image::where('places_id',$id)->get();
-        return view('front.listing_details',['settings' => $settings,'data' => $data,'datalist' => $datalist]);
+        $reviews = Review::where('places_id',$id)->get();
+        return view('front.listing_details',['settings' => $settings,'data' => $data,'datalist' => $datalist, 'reviews'=>$reviews]);
     }
     public function category_places($id,$slug){
         $datalist= Places::where('category_id',$id)->get();

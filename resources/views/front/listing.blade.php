@@ -9,9 +9,11 @@
                     <div class="hero-cap text-center pt-50 pb-20">
                         <h2>Our Listing</h2>
                     </div>
-                    <form action="#" class="search-box search-box2">
+                    <!--Hero form -->
+                    <form action="{{route('get_places')}}" method="post" class="search-box search-box2">
+                        @csrf
                         <div class="input-form">
-                            <input type="text" placeholder="What are you looking for?">
+                            @livewire('search')
                         </div>
                         <div class="select-form">
                             <div class="select-itms">
@@ -24,11 +26,12 @@
                                 </select>
                             </div>
                         </div>
-                        <!-- Search box -->
                         <div class="search-form">
-                            <a href="#">Search</a>
+                            <button type="submit">Search</button>
                         </div>
                     </form>
+                    @livewireScripts
+
                 </div>
             </div>
         </div>

@@ -1,5 +1,5 @@
 @php
-$settings = \App\Http\Controllers\HomeController::getSetting()
+    $settings = \App\Http\Controllers\HomeController::getSetting()
 @endphp
 </main>
 <footer>
@@ -17,10 +17,10 @@ $settings = \App\Http\Controllers\HomeController::getSetting()
                                                               alt=""></a>
                                 </div>
                                 <div style="color:floralwhite">
-                                <strong>Company : </strong> {{$settings->company}}<br>
-                                <strong>Address : </strong> {{$settings->address}}<br>
-                                <strong>Phone : </strong> {{$settings->phone}}<br>
-                                <strong>Email : </strong> {{$settings->email}}
+                                    <strong>Company : </strong> {{$settings->company}}<br>
+                                    <strong>Address : </strong> {{$settings->address}}<br>
+                                    <strong>Phone : </strong> {{$settings->phone}}<br>
+                                    <strong>Email : </strong> {{$settings->email}}
                                 </div>
                             </div>
                         </div>
@@ -137,6 +137,10 @@ $settings = \App\Http\Controllers\HomeController::getSetting()
 <!-- Jquery Plugins, main Jquery -->
 <script src="{{asset('front/')}}/./assets/js/plugins.js"></script>
 <script src="{{asset('front/')}}/./assets/js/main.js"></script>
+
+
+@livewireScripts
+
 
 </body>
 </html>

@@ -42,6 +42,13 @@
             <i class="far fa-envelope"></i>
             <span>Contact Messages</span>
         </a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="{{route('admin_review')}}"
+           aria-expanded="true" aria-controls="collapseUtilities">
+            <i class="far fa-envelope"></i>
+            <span>Reviews</span>
+        </a>
 
     </li>
 
