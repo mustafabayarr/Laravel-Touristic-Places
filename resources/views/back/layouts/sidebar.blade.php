@@ -49,7 +49,13 @@
             <i class="far fa-envelope"></i>
             <span>Reviews</span>
         </a>
-
+    </li>
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="{{route('admin_faq')}}"
+           aria-expanded="true" aria-controls="collapseUtilities">
+            <i class="far fa-envelope"></i>
+            <span>FAQ</span>
+        </a>
     </li>
 
     <!-- Divider -->

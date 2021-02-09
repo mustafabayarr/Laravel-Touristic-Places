@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\FaqController;
 use App\Http\Controllers\Admin\HomeController;
 use App\Http\Controllers\Admin\MessageController;
 use App\Http\Controllers\Admin\ReviewController;
@@ -59,6 +60,16 @@ Route::middleware(['auth'])->prefix('admin')->group(function () {
         Route::post('/update/{id}',[ReviewController::class,'update'])->name('admin_review_update');
         Route::get('/destroy/{id}',[ReviewController::class,'destroy'])->name('admin_review_destroy');
     });
+    //FAQ
+    Route::prefix('faqs')->group(function(){
+        Route::get('/',[FaqController::class,'index'])->name('admin_faq');
+        Route::get('/create',[FaqController::class,'create'])->name('admin_faq_create');
+        Route::post('/store',[FaqController::class,'store'])->name('admin_faq_store');
+        Route::get('/show',[FaqController::class,'show'])->name('admin_faq_show');
+        Route::get('/edit/{id}',[FaqController::class,'edit'])->name('admin_faq_edit');
+        Route::post('/update/{id}',[FaqController::class,'update'])->name('admin_faq_update');
+        Route::get('/destroy/{id}',[FaqController   ::class,'destroy'])->name('admin_faq_destroy');
+    });
     //Setting
     Route::get('/setting',[SettingController::class,'index'])->name('admin_setting');
     Route::post('/setting/update',[SettingController::class,'update'])->name('admin_setting_update');
@@ -96,6 +107,7 @@ Route::get('/listing',[App\Http\Controllers\HomeController::class,'listing'])->n
 Route::get('/contact',[App\Http\Controllers\HomeController::class,'contact'])->name('contact');
 Route::post('/sendmessage',[App\Http\Controllers\HomeController::class,'sendmessage'])->name('sendmessage');
 Route::get('/references',[App\Http\Controllers\HomeController::class,'references'])->name('references');
+Route::get('/faq',[App\Http\Controllers\HomeController::class,'faq'])->name('faq');
 Route::get('/listing_details/{id}',[App\Http\Controllers\HomeController::class,'listing_details'])->name('listing_details');
 Route::get('/category_places/{id}/{slug}',[App\Http\Controllers\HomeController::class,'category_places'])->name('category_places');
 Route::post('/getplaces',[App\Http\Controllers\HomeController::class,'get_places'])->name('get_places');

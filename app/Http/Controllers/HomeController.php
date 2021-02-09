@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 
 
 use App\Models\Category;
+use App\Models\Faq;
 use App\Models\Image;
 use App\Models\Messages;
 use App\Models\Places;
@@ -79,6 +80,11 @@ class HomeController extends Controller
             'popular_locations' => $popular_locations
         ];
         return view('front.references',$data);
+    }
+    public function faq(){
+        $datalist = Faq::all()->sortBy('position');
+        $settings = Setting::first();
+        return view('front.faq',['settings' => $settings,'datalist' => $datalist]);
     }
     public function listing_details($id){
         $settings = Setting::first();

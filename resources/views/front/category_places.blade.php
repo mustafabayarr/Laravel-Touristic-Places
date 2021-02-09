@@ -26,7 +26,7 @@
                         </div>
                         <!-- Search box -->
                         <div class="search-form">
-                            <a href="#">Search</a>
+                            <button href="#">Search</button>
                         </div>
                     </form>
                 </div>

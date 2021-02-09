@@ -21,32 +21,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b0f050f8-dbca-439a-8b7a-0f51371d573c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/ReviewController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Livewire/Review.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Review.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_02_04_220345_create_reviews_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_02_05_201138_remove_product_id.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_02_05_201408_add_placeid_to_reviews.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_02_05_210711_remove_place_id.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_02_05_210925_add_placesid_to_reviews.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/back/review.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/back/review_edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/front/user_reviews.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/livewire/review.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/FaqController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Faq.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_02_09_174705_create_faqs_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/back/faq.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/back/faq_add.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/back/faq_edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/front/faq.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Places.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Places.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/front/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/front/assets/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/back/layouts/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/back/layouts/sidebar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/front/category_places.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/category_places.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/front/layouts/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/layouts/footer.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/front/layouts/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/layouts/header.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/front/listing.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/listing.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/front/listing_details.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/listing_details.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/front/user_profile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/user_profile.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/front/widgets/_searchBoxWidget.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/widgets/_searchBoxWidget.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -193,24 +184,24 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/back" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/front" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="C:\Program Files\nodejs\node_modules\npm" />
     <property name="settings.editor.selected.configurable" value="settings.nodejs" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\MustafaBayar\Laravel1Jet\resources\views\back" />
-      <recent name="C:\Users\MustafaBayar\Laravel1Jet\resources\views\front" />
-      <recent name="C:\Users\MustafaBayar\Laravel1Jet\resources\views\layouts" />
-      <recent name="C:\Users\MustafaBayar\Laravel1Jet\resources\views\back\layouts" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\MustafaBayar\Laravel1Jet\resources\views\back\layouts" />
       <recent name="C:\Users\MustafaBayar\Laravel1Jet\resources\views\back" />
       <recent name="C:\Users\MustafaBayar\Laravel1Jet\resources\views\front" />
       <recent name="C:\Users\MustafaBayar\Laravel1Jet\resources\views\front\layouts" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\MustafaBayar\Laravel1Jet\resources\views\front" />
+      <recent name="C:\Users\MustafaBayar\Laravel1Jet\resources\views\back" />
+      <recent name="C:\Users\MustafaBayar\Laravel1Jet\resources\views\layouts" />
+      <recent name="C:\Users\MustafaBayar\Laravel1Jet\resources\views\back\layouts" />
     </key>
   </component>
   <component name="RunManager" selected="PHPUnit.phpunit.xml">
@@ -269,7 +260,12 @@
       <workItem from="1612290775114" duration="13162000" />
       <workItem from="1612369722664" duration="16661000" />
       <workItem from="1612448467384" duration="8835000" />
-      <workItem from="1612550989826" duration="16174000" />
+      <workItem from="1612550989826" duration="16496000" />
+      <workItem from="1612570975779" duration="32000" />
+      <workItem from="1612628926137" duration="1011000" />
+      <workItem from="1612705064557" duration="429000" />
+      <workItem from="1612730407927" duration="2319000" />
+      <workItem from="1612891162395" duration="7713000" />
     </task>
     <task id="LOCAL-00001" summary="beginning to project">
       <created>1608585665541</created>
@@ -446,7 +442,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612462555390</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="added dynamic reviews">
+      <created>1612570803885</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1612570803885</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -490,7 +493,8 @@
     <MESSAGE value="added dynamic our listing" />
     <MESSAGE value="added dynamic listing detail page" />
     <MESSAGE value="added dynamic search" />
-    <option name="LAST_COMMIT_MESSAGE" value="added dynamic search" />
+    <MESSAGE value="added dynamic reviews" />
+    <option name="LAST_COMMIT_MESSAGE" value="added dynamic reviews" />
   </component>
   <component name="WindowStateProjectService">
     <state x="578" y="312" key="#Composer" timestamp="1607186413273">
@@ -501,14 +505,14 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="361" y="91" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.864@0.0.1536.864" timestamp="1609700321690" />
-    <state x="499" y="187" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1611951705993">
+    <state x="499" y="187" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1612896388410">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="499" y="187" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.864@0.0.1536.864" timestamp="1611951705993" />
-    <state x="393" y="1" key="CommitChangelistDialog2" timestamp="1612462554256">
+    <state x="499" y="187" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.864@0.0.1536.864" timestamp="1612896388410" />
+    <state x="393" y="1" key="CommitChangelistDialog2" timestamp="1612570802960">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="393" y="1" key="CommitChangelistDialog2/0.0.1536.864@0.0.1536.864" timestamp="1612462554255" />
+    <state x="393" y="1" key="CommitChangelistDialog2/0.0.1536.864@0.0.1536.864" timestamp="1612570802960" />
     <state x="548" y="173" key="FileChooserDialogImpl" timestamp="1609080903478">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
@@ -545,10 +549,10 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="277" y="77" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1607191855157" />
-    <state x="361" y="165" key="Vcs.Push.Dialog.v2" timestamp="1612462561173">
+    <state x="361" y="165" key="Vcs.Push.Dialog.v2" timestamp="1612570815390">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="361" y="165" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1612462561173" />
+    <state x="361" y="165" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1612570815390" />
     <state x="486" y="204" key="refactoring.ChangeSignatureDialog" timestamp="1609724437470">
       <screen x="0" y="0" width="1536" height="864" />
     </state>

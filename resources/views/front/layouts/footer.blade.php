@@ -137,7 +137,14 @@
 <!-- Jquery Plugins, main Jquery -->
 <script src="{{asset('front/')}}/./assets/js/plugins.js"></script>
 <script src="{{asset('front/')}}/./assets/js/main.js"></script>
-
+<!-- Jquery Plugins, Accordion Jquery -->
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script>
+    $( function() {
+        $( "#accordion" ).accordion();
+    } );
+</script>
 
 @livewireScripts
 

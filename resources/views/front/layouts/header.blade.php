@@ -22,6 +22,8 @@
     <link rel="stylesheet" href="{{asset('front/')}}/assets/css/slick.css">
     <link rel="stylesheet" href="{{asset('front/')}}/assets/css/nice-select.css">
     <link rel="stylesheet" href="{{asset('front/')}}/assets/css/style.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
 </head>
 
 <body>
@@ -88,6 +90,7 @@
                                         <li><a href="{{route('about')}}">About</a></li>
                                         <li><a href="{{route('contact')}}">Contact</a></li>
                                         <li><a href="{{route('references')}}">References</a></li>
+                                        <li><a href="{{route('faq')}}">FAQ</a></li>
 
                                         @auth
                                             <li class="login"><a href="{{route('login')}}">
