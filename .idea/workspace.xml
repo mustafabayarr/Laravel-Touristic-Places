@@ -21,27 +21,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b0f050f8-dbca-439a-8b7a-0f51371d573c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/ImageController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/PlacesControlller.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/front/user_place_add.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/front/user_place_edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/front/user_places.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/front/user_places_image_add.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/navigation-menu.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Middleware/CheckAdmin.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Role.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_02_10_123259_create_roles_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_02_10_123603_create_role_user_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_02_10_145146_add_name_to_roles.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/jetstream.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/jetstream.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/mix-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/mix-manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/front/layouts/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/layouts/footer.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/front/layouts/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/layouts/header.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/front/user_profile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/user_profile.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/back/admin-login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/back/admin-login.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -271,6 +260,7 @@
       <workItem from="1612705064557" duration="429000" />
       <workItem from="1612730407927" duration="2319000" />
       <workItem from="1612891162395" duration="21536000" />
+      <workItem from="1612958795125" duration="10158000" />
     </task>
     <task id="LOCAL-00001" summary="beginning to project">
       <created>1608585665541</created>
@@ -461,7 +451,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612901933381</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="added dynamic user places from user panel">
+      <created>1612958864285</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1612958864285</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -481,7 +478,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="added front-end template" />
     <MESSAGE value="added and fixed all front-end template" />
     <MESSAGE value="added index admin blade template" />
     <MESSAGE value="login transactions have been done" />
@@ -506,7 +502,8 @@
     <MESSAGE value="added dynamic search" />
     <MESSAGE value="added dynamic reviews" />
     <MESSAGE value="added dynamic FAQ" />
-    <option name="LAST_COMMIT_MESSAGE" value="added dynamic FAQ" />
+    <MESSAGE value="added dynamic user places from user panel" />
+    <option name="LAST_COMMIT_MESSAGE" value="added dynamic user places from user panel" />
   </component>
   <component name="WindowStateProjectService">
     <state x="578" y="312" key="#Composer" timestamp="1607186413273">
@@ -521,10 +518,10 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="499" y="187" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.864@0.0.1536.864" timestamp="1612918963434" />
-    <state x="393" y="1" key="CommitChangelistDialog2" timestamp="1612901932511">
+    <state x="393" y="1" key="CommitChangelistDialog2" timestamp="1612958863049">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="393" y="1" key="CommitChangelistDialog2/0.0.1536.864@0.0.1536.864" timestamp="1612901932511" />
+    <state x="393" y="1" key="CommitChangelistDialog2/0.0.1536.864@0.0.1536.864" timestamp="1612958863049" />
     <state x="548" y="173" key="FileChooserDialogImpl" timestamp="1609080903478">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
@@ -561,10 +558,10 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="277" y="77" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1607191855157" />
-    <state x="361" y="165" key="Vcs.Push.Dialog.v2" timestamp="1612901935400">
+    <state x="361" y="165" key="Vcs.Push.Dialog.v2" timestamp="1612958915059">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="361" y="165" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1612901935400" />
+    <state x="361" y="165" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1612958915059" />
     <state x="486" y="204" key="refactoring.ChangeSignatureDialog" timestamp="1609724437470">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
