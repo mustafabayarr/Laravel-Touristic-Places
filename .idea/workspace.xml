@@ -21,15 +21,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b0f050f8-dbca-439a-8b7a-0f51371d573c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Middleware/CheckAdmin.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Role.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_02_10_123259_create_roles_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_02_10_123603_create_role_user_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_02_10_145146_add_name_to_roles.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/UserController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/back/user_edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/back/user_places.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/back/user_roles.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/back/user_show.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/back/admin-login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/back/admin-login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/back/layouts/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/back/layouts/sidebar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/back/review.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/back/review.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/front/user_profile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/front/user_profile.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -177,7 +177,7 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/front" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/back" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="C:\Program Files\nodejs\node_modules\npm" />
     <property name="settings.editor.selected.configurable" value="settings.nodejs" />
@@ -185,17 +185,17 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\MustafaBayar\Laravel1Jet\resources\views\back" />
+      <recent name="C:\Users\MustafaBayar\Laravel1Jet\resources\views\front" />
+      <recent name="C:\Users\MustafaBayar\Laravel1Jet\resources\views\layouts" />
+      <recent name="C:\Users\MustafaBayar\Laravel1Jet\resources\views\back\layouts" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\MustafaBayar\Laravel1Jet\resources\views\back\layouts" />
       <recent name="C:\Users\MustafaBayar\Laravel1Jet\resources\views\back" />
       <recent name="C:\Users\MustafaBayar\Laravel1Jet\resources\views\front" />
       <recent name="C:\Users\MustafaBayar\Laravel1Jet\resources\views\front\layouts" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\MustafaBayar\Laravel1Jet\resources\views\front" />
-      <recent name="C:\Users\MustafaBayar\Laravel1Jet\resources\views\back" />
-      <recent name="C:\Users\MustafaBayar\Laravel1Jet\resources\views\layouts" />
-      <recent name="C:\Users\MustafaBayar\Laravel1Jet\resources\views\back\layouts" />
     </key>
   </component>
   <component name="RunManager" selected="PHPUnit.phpunit.xml">
@@ -260,7 +260,7 @@
       <workItem from="1612705064557" duration="429000" />
       <workItem from="1612730407927" duration="2319000" />
       <workItem from="1612891162395" duration="21536000" />
-      <workItem from="1612958795125" duration="10158000" />
+      <workItem from="1612958795125" duration="18662000" />
     </task>
     <task id="LOCAL-00001" summary="beginning to project">
       <created>1608585665541</created>
@@ -458,7 +458,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612958864285</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="added user role and admin role">
+      <created>1612971359102</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1612971359102</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -478,7 +485,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="added and fixed all front-end template" />
     <MESSAGE value="added index admin blade template" />
     <MESSAGE value="login transactions have been done" />
     <MESSAGE value="fixed submit" />
@@ -503,7 +509,8 @@
     <MESSAGE value="added dynamic reviews" />
     <MESSAGE value="added dynamic FAQ" />
     <MESSAGE value="added dynamic user places from user panel" />
-    <option name="LAST_COMMIT_MESSAGE" value="added dynamic user places from user panel" />
+    <MESSAGE value="added user role and admin role" />
+    <option name="LAST_COMMIT_MESSAGE" value="added user role and admin role" />
   </component>
   <component name="WindowStateProjectService">
     <state x="578" y="312" key="#Composer" timestamp="1607186413273">
@@ -518,10 +525,10 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="499" y="187" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.864@0.0.1536.864" timestamp="1612918963434" />
-    <state x="393" y="1" key="CommitChangelistDialog2" timestamp="1612958863049">
+    <state x="393" y="1" key="CommitChangelistDialog2" timestamp="1612971358395">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="393" y="1" key="CommitChangelistDialog2/0.0.1536.864@0.0.1536.864" timestamp="1612958863049" />
+    <state x="393" y="1" key="CommitChangelistDialog2/0.0.1536.864@0.0.1536.864" timestamp="1612971358395" />
     <state x="548" y="173" key="FileChooserDialogImpl" timestamp="1609080903478">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
@@ -558,10 +565,10 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="277" y="77" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1607191855157" />
-    <state x="361" y="165" key="Vcs.Push.Dialog.v2" timestamp="1612958915059">
+    <state x="361" y="165" key="Vcs.Push.Dialog.v2" timestamp="1612971360710">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="361" y="165" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1612958915059" />
+    <state x="361" y="165" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1612971360710" />
     <state x="486" y="204" key="refactoring.ChangeSignatureDialog" timestamp="1609724437470">
       <screen x="0" y="0" width="1536" height="864" />
     </state>

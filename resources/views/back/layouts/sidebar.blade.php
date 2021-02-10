@@ -57,6 +57,13 @@
             <span>FAQ</span>
         </a>
     </li>
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="{{route('admin_users')}}"
+           aria-expanded="true" aria-controls="collapseUtilities">
+            <i class="far fa-envelope"></i>
+            <span>Users</span>
+        </a>
+    </li>
 
     <!-- Divider -->
     <hr class="sidebar-divider">
