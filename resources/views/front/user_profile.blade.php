@@ -31,22 +31,17 @@
                             <ul class="list cat-list">
                                 <li>
                                     <a href="{{route('my_account')}}" class="d-flex">
-                                        <p>Profile</p>
+                                        <p>My Profile</p>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#" class="d-flex">
-                                        <p>Orders</p>
+                                    <a href="{{route('my_reviews')}}" class="d-flex">
+                                        <p>My Reviews</p>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#" class="d-flex">
-                                        <p>Reviews</p>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" class="d-flex">
-                                        <p>Messages</p>
+                                    <a href="{{route('user_places')}}" class="d-flex">
+                                        <p>My Places</p>
                                     </a>
                                 </li>
                                 <li>

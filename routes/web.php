@@ -5,6 +5,7 @@ use App\Http\Controllers\Admin\HomeController;
 use App\Http\Controllers\Admin\MessageController;
 use App\Http\Controllers\Admin\ReviewController;
 use App\Http\Controllers\Admin\SettingController;
+use App\Http\Controllers\PlacesControlller;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -35,6 +36,7 @@ Route::middleware(['auth'])->prefix('admin')->group(function () {
         Route::post('/store/{places_id}',[App\Http\Controllers\Admin\ImageController::class,'store'])->name('admin_image_store');
         Route::get('/delete/{id}/{places_id}',[App\Http\Controllers\Admin\ImageController::class,'destroy'])->name('admin_image_destroy');
     });
+
     //Places
     Route::prefix('places')->group(function(){
         Route::get('/',[App\Http\Controllers\Admin\PlacesController::class,'index'])->name('admin_places');
@@ -77,9 +79,6 @@ Route::middleware(['auth'])->prefix('admin')->group(function () {
 
 });
 
-
-
-
 Route::get('/admin/login',[HomeController::class,'login'])->name('admin_login');
 Route::post('/admin/login_check',[HomeController::class,'login_check'])->name('admin_login_check');
 Route::get('/admin/logout',[HomeController::class,'logout'])->name('admin_logout');
@@ -97,7 +96,24 @@ Route::middleware(['auth'])->prefix('my_account')->namespace('my_account')->grou
 });
 
 Route::middleware(['auth'])->prefix('user')->group(function () {
-    Route::get('/profile',[UserController::class,'index'])->name('user_profile');
+    Route::get('/profile',[UserController::class,'index'])->name('profile.show');
+    //User Places
+    Route::prefix('places')->group(function(){
+        Route::get('/',[PlacesControlller::class,'index'])->name('user_places');
+        Route::get('/create',[PlacesControlller::class,'create'])->name('user_places_create');
+        Route::post('/store',[PlacesControlller::class,'store'])->name('user_places_store');
+        Route::get('/show',[PlacesControlller::class,'show'])->name('user_places_show');
+        Route::get('/edit/{id}',[PlacesControlller::class,'edit'])->name('user_places_edit');
+        Route::post('/update/{id}',[PlacesControlller::class,'update'])->name('user_places_update');
+        Route::get('/destroy/{id}',[PlacesControlller::class,'destroy'])->name('user_places_destroy');
+    });
+    //User Images
+    Route::prefix('image')->group(function(){
+        //create ve store daki id ler places taki idler oluyor. delete deki id image teki oluyor
+        Route::get('/create/{places_id}',[App\Http\Controllers\ImageController::class,'create'])->name('user_image_create');
+        Route::post('/store/{places_id}',[App\Http\Controllers\ImageController::class,'store'])->name('user_image_store');
+        Route::get('/delete/{id}/{places_id}',[App\Http\Controllers\ImageController::class,'destroy'])->name('user_image_destroy');
+    });
 });
 
 Route::get('/',[App\Http\Controllers\HomeController::class,'index'])->name('homepage');
